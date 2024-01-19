@@ -1,0 +1,1496 @@
+File size: 2048
+0x0000  NOP                      
+0x0001  JMP 0x16c9               ;; PC <= adr      
+0x0004  LXI 0x2084               ;; H <- byte 3, L <- byte 2
+0x0007  MOV                      ;; A <- (HL)      
+0x0008  ANA                      ;; A <- A & A     
+0x0009  JZ 0x0707                ;; if Z, PC <- adr
+0x000c  INX                      ;; HL <- HL + 1   
+0x000d  MOV                      ;; A <- (HL)      
+0x000e  ANA                      ;; A <- A & A     
+0x000f  RNZ                      ;; if NZ, RET     
+0x0010  MVI 0x01                 ;; B <- byte 2    
+0x0012  JMP 0x18fa               ;; PC <= adr      
+0x0015  LXI 0x2810               ;; H <- byte 3, L <- byte 2
+0x0018  LXI 0x1ca3               ;; D <- byte 3, E <- byte 2
+0x001b  MVI 0x15                 ;; C <- byte 2    
+0x001d  CALL 0x08f3              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0020  MVI 0x0a                 ;; A <- byte 2    
+0x0022  STA 0x206c               ;; (adr) <- A     
+0x0025  LXI 0x1dbe               ;; B <- byte 3, C <- byte 2
+0x0028  CALL 0x1856              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x002b  JC 0x1837                ;; if CY, PC<-adr 
+0x002e  CALL 0x1844              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0031  JMP 0x1828               ;; PC <= adr      
+0x0034  CALL 0x0ab1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0037  LXI 0x1dcf               ;; B <- byte 3, C <- byte 2
+0x003a  CALL 0x1856              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x003d  RC                       ;; if CY, RET     
+0x003e  CALL 0x184c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0041  JMP 0x183a               ;; PC <= adr      
+0x0044  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0045  MVI 0x10                 ;; B <- byte 2    
+0x0047  CALL 0x1439              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x004a  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x004b  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x004c  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x004d  LDA 0x206c               ;; A <- (adr)     
+0x0050  MOV                      ;; C <- A         
+0x0051  CALL 0x0a93              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0054  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0055  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0056  LDAX                     ;; A <- (BC)      
+0x0057  CPI 0xff                 ;; A - data       
+0x0059  STC                      ;; CY = 1         
+0x005a  RZ                       ;; if Z, RET      
+0x005b  MOV                      ;; L <- A         
+0x005c  INX                      ;; BC <- BC+1     
+0x005d  LDAX                     ;; A <- (BC)      
+0x005e  MOV                      ;; H <- A         
+0x005f  INX                      ;; BC <- BC+1     
+0x0060  LDAX                     ;; A <- (BC)      
+0x0061  MOV                      ;; E <- A         
+0x0062  INX                      ;; BC <- BC+1     
+0x0063  LDAX                     ;; A <- (BC)      
+0x0064  MOV                      ;; D <- A         
+0x0065  INX                      ;; BC <- BC+1     
+0x0066  ANA                      ;; A <- A & A     
+0x0067  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0068  LXI 0x20c2               ;; H <- byte 3, L <- byte 2
+0x006b  INR                      ;; (HL) <- (HL)+1 
+0x006c  INX                      ;; HL <- HL + 1   
+0x006d  MOV                      ;; C <- (HL)      
+0x006e  CALL 0x01d9              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0071  MOV                      ;; B <- A         
+0x0072  LDA 0x20ca               ;; A <- (adr)     
+0x0075  CMP                      ;; A - B          
+0x0076  JZ 0x1898                ;; if Z, PC <- adr
+0x0079  LDA 0x20c2               ;; A <- (adr)     
+0x007c  ANI 0x04                 ;; A <- A & data  
+0x007e  LHLD 0x20cc              ;; L <- (adr); H<-(adr+1)
+0x0081  JNZ 0x1888               ;; if NZ, PC <- adr
+0x0084  LXI 0x0030               ;; D <- byte 3, E <- byte 2
+0x0087  DAD                      ;; HL = HL + DE   
+0x0088  SHLD 0x20c7              ;; (adr) <-L; (adr+1)<-H
+0x008b  LXI 0x20c5               ;; H <- byte 3, L <- byte 2
+0x008e  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0091  XCHG                     ;; H <-> D; L <-> E
+0x0092  JMP 0x15d3               ;; PC <= adr      
+0x0095  NOP                      
+0x0096  NOP                      
+0x0097  NOP                      
+0x0098  MVI 0x01                 ;; A <- byte 2    
+0x009a  STA 0x20cb               ;; (adr) <- A     
+0x009d  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x009e  LXI 0x2050               ;; H <- byte 3, L <- byte 2
+0x00a1  LXI 0x1bc0               ;; D <- byte 3, E <- byte 2
+0x00a4  MVI 0x10                 ;; B <- byte 2    
+0x00a6  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00a9  MVI 0x02                 ;; A <- byte 2    
+0x00ab  STA 0x2080               ;; (adr) <- A     
+0x00ae  MVI 0xff                 ;; A <- byte 2    
+0x00b0  STA 0x207e               ;; (adr) <- A     
+0x00b3  MVI 0x04                 ;; A <- byte 2    
+0x00b5  STA 0x20c1               ;; (adr) <- A     
+0x00b8  LDA 0x2055               ;; A <- (adr)     
+0x00bb  ANI 0x01                 ;; A <- A & data  
+0x00bd  JZ 0x18b8                ;; if Z, PC <- adr
+0x00c0  LDA 0x2055               ;; A <- (adr)     
+0x00c3  ANI 0x01                 ;; A <- A & data  
+0x00c5  JNZ 0x18c0               ;; if NZ, PC <- adr
+0x00c8  LXI 0x3311               ;; H <- byte 3, L <- byte 2
+0x00cb  MVI 0x26                 ;; A <- byte 2    
+0x00cd  NOP                      
+0x00ce  CALL 0x08ff              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00d1  JMP 0x0ab6               ;; PC <= adr      
+0x00d4  LXI 0x2400               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x00d7  MVI 0x00                 ;; B <- byte 2    
+0x00d9  CALL 0x01e6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00dc  CALL 0x1956              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00df  MVI 0x08                 ;; A <- byte 2    
+0x00e1  STA 0x20cf               ;; (adr) <- A     
+0x00e4  JMP 0x0aea               ;; PC <= adr      
+0x00e7  LDA 0x2067               ;; A <- (adr)     
+0x00ea  LXI 0x20e7               ;; H <- byte 3, L <- byte 2
+0x00ed  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x00ee  RNC                      ;; if NCY, RET    
+0x00ef  INX                      ;; HL <- HL + 1   
+0x00f0  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x00f1  MVI 0x02                 ;; B <- byte 2    
+0x00f3  LDA 0x2082               ;; A <- (adr)     
+0x00f6  DCR                      ;; A <- A-1       
+0x00f7  RNZ                      ;; if NZ, RET     
+0x00f8  INR                      ;; B <- B+1       
+0x00f9  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x00fa  LDA 0x2094               ;; A <- (adr)     
+0x00fd  ORA                      ;; A <- A | B     
+0x00fe  STA 0x2094               ;; (adr) <- A     
+0x0101  OUT 0x03                 ;; special        
+0x0103  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0104  LXI 0x2200               ;; H <- byte 3, L <- byte 2
+0x0107  JMP 0x01c3               ;; PC <= adr      
+0x010a  CALL 0x14d8              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x010d  JMP 0x1597               ;; PC <= adr      
+0x0110  LXI 0x20e7               ;; H <- byte 3, L <- byte 2
+0x0113  LDA 0x2067               ;; A <- (adr)     
+0x0116  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0117  RC                       ;; if CY, RET     
+0x0118  INX                      ;; HL <- HL + 1   
+0x0119  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x011a  MVI 0x1c                 ;; C <- byte 2    
+0x011c  LXI 0x241e               ;; H <- byte 3, L <- byte 2
+0x011f  LXI 0x1ae4               ;; D <- byte 3, E <- byte 2
+0x0122  JMP 0x08f3               ;; PC <= adr      
+0x0125  LXI 0x20f8               ;; H <- byte 3, L <- byte 2
+0x0128  JMP 0x1931               ;; PC <= adr      
+0x012b  LXI 0x20fc               ;; H <- byte 3, L <- byte 2
+0x012e  JMP 0x1931               ;; PC <= adr      
+0x0131  MOV                      ;; E <- (HL)      
+0x0132  INX                      ;; HL <- HL + 1   
+0x0133  MOV                      ;; D <- (HL)      
+0x0134  INX                      ;; HL <- HL + 1   
+0x0135  MOV                      ;; A <- (HL)      
+0x0136  INX                      ;; HL <- HL + 1   
+0x0137  MOV                      ;; H <- (HL)      
+0x0138  MOV                      ;; L <- A         
+0x0139  JMP 0x09ad               ;; PC <= adr      
+0x013c  MVI 0x07                 ;; C <- byte 2    
+0x013e  LXI 0x3501               ;; H <- byte 3, L <- byte 2
+0x0141  LXI 0x1fa9               ;; D <- byte 3, E <- byte 2
+0x0144  JMP 0x08f3               ;; PC <= adr      
+0x0147  LDA 0x20eb               ;; A <- (adr)     
+0x014a  LXI 0x3c01               ;; H <- byte 3, L <- byte 2
+0x014d  JMP 0x09b2               ;; PC <= adr      
+0x0150  LXI 0x20f4               ;; H <- byte 3, L <- byte 2
+0x0153  JMP 0x1931               ;; PC <= adr      
+0x0156  CALL 0x1a5c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0159  CALL 0x191a              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x015c  CALL 0x1925              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x015f  CALL 0x192b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0162  CALL 0x1950              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0165  CALL 0x193c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0168  JMP 0x1947               ;; PC <= adr      
+0x016b  CALL 0x19dc              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x016e  JMP 0x1671               ;; PC <= adr      
+0x0171  MVI 0x01                 ;; A <- byte 2    
+0x0173  STA 0x206d               ;; (adr) <- A     
+0x0176  JMP 0x16e6               ;; PC <= adr      
+0x0179  CALL 0x19d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x017c  CALL 0x1947              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x017f  JMP 0x193c               ;; PC <= adr      
+0x0182  STA 0x20c1               ;; (adr) <- A     
+0x0185  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0186  ADC                      ;; A <- A + E + CY
+0x0187  DAD                      ;; HL = HL + DE   
+0x0188  JMP 0x09d6               ;; PC <= adr      
+0x018b  LXI 0x2803               ;; H <- byte 3, L <- byte 2
+0x018e  LXI 0x19be               ;; D <- byte 3, E <- byte 2
+0x0191  MVI 0x13                 ;; C <- byte 2    
+0x0193  JMP 0x08f3               ;; PC <= adr      
+0x0196  NOP                      
+0x0197  NOP                      
+0x0198  NOP                      
+0x0199  NOP                      
+0x019a  LDA 0x201e               ;; A <- (adr)     
+0x019d  ANA                      ;; A <- A & A     
+0x019e  JNZ 0x19ac               ;; if NZ, PC <- adr
+0x01a1  IN 0x01                  ;; special        
+0x01a3  ANI 0x76                 ;; A <- A & data  
+0x01a5  SUI 0x72                 ;; A <- A - data  
+0x01a7  RNZ                      ;; if NZ, RET     
+0x01a8  INR                      ;; A <- A+1       
+0x01a9  STA 0x201e               ;; (adr) <- A     
+0x01ac  IN 0x01                  ;; special        
+0x01ae  ANI 0x76                 ;; A <- A & data  
+0x01b0  CPI 0x34                 ;; A - data       
+0x01b2  RNZ                      ;; if NZ, RET     
+0x01b3  LXI 0x2e1b               ;; H <- byte 3, L <- byte 2
+0x01b6  LXI 0x0bf7               ;; D <- byte 3, E <- byte 2
+0x01b9  MVI 0x09                 ;; C <- byte 2    
+0x01bb  JMP 0x08f3               ;; PC <= adr      
+0x01be  NOP                      
+0x01bf  INX                      ;; DE <- DE + 1   
+0x01c0  NOP                      
+0x01c1  NOP                      
+0x01c2  INX                      ;; DE <- DE + 1   
+0x01c3  MVI 0x26                 ;; C <- byte 2    
+0x01c5  STAX                     ;; (BC) <- A      
+0x01c6  MVI 0x11                 ;; C <- byte 2    
+0x01c8  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x01c9  MVI 0x11                 ;; C <- byte 2    
+0x01cb  NOP                      
+0x01cc  INX                      ;; DE <- DE + 1   
+0x01cd  NOP                      
+0x01ce  MVI 0x0d                 ;; C <- byte 2    
+0x01d0  NOP                      
+0x01d1  MVI 0x01                 ;; A <- byte 2    
+0x01d3  STA 0x20e9               ;; (adr) <- A     
+0x01d6  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01d7  XRA                      ;; A <- A ^ A     
+0x01d8  JMP 0x19d3               ;; PC <= adr      
+0x01db  NOP                      
+0x01dc  LDA 0x2094               ;; A <- (adr)     
+0x01df  ANA                      ;; A <- A & B     
+0x01e0  STA 0x2094               ;; (adr) <- A     
+0x01e3  OUT 0x03                 ;; special        
+0x01e5  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01e6  LXI 0x2701               ;; H <- byte 3, L <- byte 2
+0x01e9  JZ 0x19fa                ;; if Z, PC <- adr
+0x01ec  LXI 0x1c60               ;; D <- byte 3, E <- byte 2
+0x01ef  MVI 0x10                 ;; B <- byte 2    
+0x01f1  MOV                      ;; C <- A         
+0x01f2  CALL 0x1439              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x01f5  MOV                      ;; A <- C         
+0x01f6  DCR                      ;; A <- A-1       
+0x01f7  JNZ 0x19ec               ;; if NZ, PC <- adr
+0x01fa  MVI 0x10                 ;; B <- byte 2    
+0x01fc  CALL 0x14cb              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x01ff  MOV                      ;; A <- H         
+0x0200  CPI 0x35                 ;; A - data       
+0x0202  JNZ 0x19fa               ;; if NZ, PC <- adr
+0x0205  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0206  LXI 0x2072               ;; H <- byte 3, L <- byte 2
+0x0209  MOV                      ;; B <- (HL)      
+0x020a  LDAX                     ;; A <- (DE)      
+0x020b  ANI 0x80                 ;; A <- A & data  
+0x020d  XRA                      ;; A <- A ^ B     
+0x020e  RNZ                      ;; if NZ, RET     
+0x020f  STC                      ;; CY = 1         
+0x0210  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0211  STA 0x242b               ;; (adr) <- A     
+0x0214  INR                      ;; E <-E+1        
+0x0215  MVI 0x11                 ;; D <- byte 2    
+0x0217  DCR                      ;; C <-C-1        
+0x0218  LDAX                     ;; A <- (BC)      
+0x0219  NOP                      
+0x021a  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x021b  MVI 0x05                 ;; B <- byte 2    
+0x021d  INR                      ;; B <- B+1       
+0x021e  INX                      ;; BC <- BC+1     
+0x021f  STAX                     ;; (BC) <- A      
+0x0220  LXI 0x2e34               ;; B <- byte 3, C <- byte 2
+0x0223  DAA                      ;; special        
+0x0224  SHLD 0x181c              ;; (adr) <-L; (adr+1)<-H
+0x0227  DCR                      ;; D <- D-1       
+0x0228  INX                      ;; DE <- DE + 1   
+0x0229  NOP                      
+0x022a  MVI 0x0d                 ;; C <- byte 2    
+0x022c  INR                      ;; C <- C+1       
+0x022d  DCX                      ;; BC = BC-1      
+0x022e  DAD                      ;; HL = HL + BC   
+0x022f  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0230  DCR                      ;; B <- B-1       
+0x0231  RST                      ;; CALL $38       
+0x0232  LDAX                     ;; A <- (DE)      
+0x0233  MOV                      ;; (HL) <- A      
+0x0234  INX                      ;; HL <- HL + 1   
+0x0235  INX                      ;; DE <- DE + 1   
+0x0236  DCR                      ;; B <- B-1       
+0x0237  JNZ 0x1a32               ;; if NZ, PC <- adr
+0x023a  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x023b  MOV                      ;; E <- (HL)      
+0x023c  INX                      ;; HL <- HL + 1   
+0x023d  MOV                      ;; D <- (HL)      
+0x023e  INX                      ;; HL <- HL + 1   
+0x023f  MOV                      ;; A <- (HL)      
+0x0240  INX                      ;; HL <- HL + 1   
+0x0241  MOV                      ;; C <- (HL)      
+0x0242  INX                      ;; HL <- HL + 1   
+0x0243  MOV                      ;; B <- (HL)      
+0x0244  MOV                      ;; H <- C         
+0x0245  MOV                      ;; L <- A         
+0x0246  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0247  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0248  MVI 0x03                 ;; B <- byte 2    
+0x024a  MOV                      ;; A <- H         
+0x024b  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x024c  MOV                      ;; H <- A         
+0x024d  MOV                      ;; A <- L         
+0x024e  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x024f  MOV                      ;; L <- A         
+0x0250  DCR                      ;; B <- B-1       
+0x0251  JNZ 0x1a4a               ;; if NZ, PC <- adr
+0x0254  MOV                      ;; A <- H         
+0x0255  ANI 0x3f                 ;; A <- A & data  
+0x0257  ORI 0x20                 ;; A <- A | data  
+0x0259  MOV                      ;; H <- A         
+0x025a  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x025b  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x025c  LXI 0x2400               ;; H <- byte 3, L <- byte 2
+0x025f  MVI 0x00                 ;; (HL) <- byte 2 
+0x0261  INX                      ;; HL <- HL + 1   
+0x0262  MOV                      ;; A <- H         
+0x0263  CPI 0x40                 ;; A - data       
+0x0265  JNZ 0x1a5f               ;; if NZ, PC <- adr
+0x0268  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0269  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x026a  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x026b  LDAX                     ;; A <- (DE)      
+0x026c  ORA                      ;; A <- A | (HL)  
+0x026d  MOV                      ;; (HL) <- A      
+0x026e  INX                      ;; DE <- DE + 1   
+0x026f  INX                      ;; HL <- HL + 1   
+0x0270  DCR                      ;; C <-C-1        
+0x0271  JNZ 0x1a6b               ;; if NZ, PC <- adr
+0x0274  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0275  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x0278  DAD                      ;; HL = HL + BC   
+0x0279  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x027a  DCR                      ;; B <- B-1       
+0x027b  JNZ 0x1a69               ;; if NZ, PC <- adr
+0x027e  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x027f  CALL 0x092e              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0282  ANA                      ;; A <- A & A     
+0x0283  RZ                       ;; if Z, RET      
+0x0284  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x0285  DCR                      ;; A <- A-1       
+0x0286  MOV                      ;; (HL) <- A      
+0x0287  CALL 0x19e6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x028a  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x028b  LXI 0x2501               ;; H <- byte 3, L <- byte 2
+0x028e  ANI 0x0f                 ;; A <- A & data  
+0x0290  JMP 0x09c5               ;; PC <= adr      
+0x0293  NOP                      
+0x0294  NOP                      
+0x0295  NOP                      
+0x0296  NOP                      
+0x0297  RST                      ;; CALL $38       
+0x0298  CMP                      ;; A - B          
+0x0299  CPI 0x20                 ;; A - data       
+0x029b  INR                      ;; E <-E+1        
+0x029c  NOP                      
+0x029d  SBB                      ;; A <- A - (HL) - CY
+0x029e  NOP                      
+0x029f  NOP                      
+0x02a0  INR                      ;; E <-E+1        
+0x02a1  NOP                      
+0x02a2  NOP                      
+0x02a3  DCX                      ;; BC = BC-1      
+0x02a4  NOP                      
+0x02a5  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x02a6  MVI 0x00                 ;; B <- byte 2    
+0x02a8  INR                      ;; C <- C+1       
+0x02a9  INR                      ;; B <- B+1       
+0x02aa  MVI 0x0e                 ;; H <- byte 2    
+0x02ac  DCR                      ;; D <- D-1       
+0x02ad  INR                      ;; B <- B+1       
+0x02ae  LXI 0x2626               ;; D <- byte 3, E <- byte 2
+0x02b1  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x02b2  DCX                      ;; BC = BC-1      
+0x02b3  NOP                      
+0x02b4  NOP                      
+0x02b5  INR                      ;; B <- B+1       
+0x02b6  LXI 0x2624               ;; D <- byte 3, E <- byte 2
+0x02b9  DCR                      ;; H <- H-1       
+0x02ba  DCX                      ;; DE = DE-1      
+0x02bb  MVI 0x0e                 ;; H <- byte 2    
+0x02bd  LXI 0x1c26               ;; D <- byte 3, E <- byte 2
+0x02c0  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x02c1  DCX                      ;; BC = BC-1      
+0x02c2  NOP                      
+0x02c3  NOP                      
+0x02c4  INR                      ;; B <- B+1       
+0x02c5  LXI 0x2612               ;; D <- byte 3, E <- byte 2
+0x02c8  LXI 0x1314               ;; B <- byte 3, C <- byte 2
+0x02cb  INX                      ;; DE <- DE + 1   
+0x02cc  MVI 0x0d                 ;; C <- byte 2    
+0x02ce  MVI 0x0e                 ;; H <- byte 2    
+0x02d0  DCR                      ;; C <-C-1        
+0x02d1  DCX                      ;; BC = BC-1      
+0x02d2  NOP                      
+0x02d3  MVI 0x1b                 ;; H <- byte 2    
+0x02d5  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x02d6  DCX                      ;; BC = BC-1      
+0x02d7  NOP                      
+0x02d8  NOP                      
+0x02d9  INR                      ;; B <- B+1       
+0x02da  LXI 0x2626               ;; D <- byte 3, E <- byte 2
+0x02dd  LXI 0x1314               ;; B <- byte 3, C <- byte 2
+0x02e0  INX                      ;; DE <- DE + 1   
+0x02e1  MVI 0x0d                 ;; C <- byte 2    
+0x02e3  MVI 0x26                 ;; H <- byte 2    
+0x02e5  STAX                     ;; (DE) <- A      
+0x02e6  STAX                     ;; (BC) <- A      
+0x02e7  MVI 0x11                 ;; C <- byte 2    
+0x02e9  INR                      ;; B <- B+1       
+0x02ea  INR                      ;; H <- H+1       
+0x02eb  DCX                      ;; DE = DE-1      
+0x02ec  DCR                      ;; H <- H-1       
+0x02ed  MVI 0x07                 ;; H <- byte 2    
+0x02ef  NOP                      
+0x02f0  CMC                      ;; CY=!CY         
+0x02f1  STAX                     ;; (DE) <- A      
+0x02f2  STAX                     ;; (BC) <- A      
+0x02f3  MVI 0x11                 ;; C <- byte 2    
+0x02f5  INR                      ;; B <- B+1       
+0x02f6  MVI 0x12                 ;; H <- byte 2    
+0x02f8  STAX                     ;; (BC) <- A      
+0x02f9  MVI 0x11                 ;; C <- byte 2    
+0x02fb  INR                      ;; B <- B+1       
+0x02fc  INR                      ;; H <- H+1       
+0x02fd  INR                      ;; E <-E+1        
+0x02fe  DCR                      ;; H <- H-1       
+0x02ff  MVI 0x01                 ;; H <- byte 2    
+0x0301  NOP                      
+0x0302  NOP                      
+0x0303  NOP                      
+0x0304  NOP                      
+0x0305  NOP                      
+0x0306  NOP                      
+0x0307  NOP                      
+0x0308  STAX                     ;; (BC) <- A      
+0x0309  MOV                      ;; A <- B         
+0x030a  NOP                      
+0x030b  MOV                      ;; A <- B         
+0x030c  NOP                      
+0x030d  NOP                      
+0x030e  RM                       ;; if M, RET      
+0x030f  NOP                      
+0x0310  NOP                      
+0x0311  ADD                      ;; A <- A + B     
+0x0312  NOP                      
+0x0313  ADC                      ;; A <- A + (HL) + CY
+0x0314  STAX                     ;; (BC) <- A      
+0x0315  RST                      ;; CALL $38       
+0x0316  DCR                      ;; B <- B-1       
+0x0317  INR                      ;; C <- C+1       
+0x0318  MOV                      ;; H <- B         
+0x0319  INR                      ;; E <-E+1        
+0x031a  NOP                      
+0x031b  NOP                      
+0x031c  NOP                      
+0x031d  LXI 0x0000               ;; B <- byte 3, C <- byte 2
+0x0320  NOP                      
+0x0321  NOP                      
+0x0322  NOP                      
+0x0323  CMP                      ;; A - E          
+0x0324  INX                      ;; BC <- BC+1     
+0x0325  NOP                      
+0x0326  NOP                      
+0x0327  SUB                      ;; A <- A - B     
+0x0328  INR                      ;; E <-E+1        
+0x0329  NOP                      
+0x032a  NOP                      
+0x032b  LXI 0x0004               ;; B <- byte 3, C <- byte 2
+0x032e  RST                      ;; CALL $38       
+0x032f  RST                      ;; CALL $38       
+0x0330  NOP                      
+0x0331  NOP                      
+0x0332  STAX                     ;; (BC) <- A      
+0x0333  HLT                      ;; special        
+0x0334  INR                      ;; B <- B+1       
+0x0335  NOP                      
+0x0336  NOP                      
+0x0337  NOP                      
+0x0338  NOP                      
+0x0339  NOP                      
+0x033a  INR                      ;; B <- B+1       
+0x033b  XRI 0x1c                 ;; A <- A ^ data  
+0x033d  NOP                      
+0x033e  NOP                      
+0x033f  INX                      ;; BC <- BC+1     
+0x0340  NOP                      
+0x0341  NOP                      
+0x0342  NOP                      
+0x0343  ORA                      ;; A <- A | (HL)  
+0x0344  INR                      ;; B <- B+1       
+0x0345  NOP                      
+0x0346  NOP                      
+0x0347  LXI 0x1d00               ;; B <- byte 3, C <- byte 2
+0x034a  INR                      ;; B <- B+1       
+0x034b  JPO 0x001c               ;; if PO, PC <- adr
+0x034e  NOP                      
+0x034f  INX                      ;; BC <- BC+1     
+0x0350  NOP                      
+0x0351  NOP                      
+0x0352  NOP                      
+0x0353  ADD                      ;; A <- A + D     
+0x0354  MVI 0x00                 ;; B <- byte 2    
+0x0356  NOP                      
+0x0357  LXI 0x1d06               ;; B <- byte 3, C <- byte 2
+0x035a  INR                      ;; B <- B+1       
+0x035b  RNC                      ;; if NCY, RET    
+0x035c  INR                      ;; E <-E+1        
+0x035d  NOP                      
+0x035e  NOP                      
+0x035f  INX                      ;; BC <- BC+1     
+0x0360  RST                      ;; CALL $38       
+0x0361  NOP                      
+0x0362  RNZ                      ;; if NZ, RET     
+0x0363  INR                      ;; E <-E+1        
+0x0364  NOP                      
+0x0365  NOP                      
+0x0366  NOP                      
+0x0367  LXI 0x0001               ;; H <- byte 3, L <- byte 2
+0x036a  NOP                      
+0x036b  NOP                      
+0x036c  STAX                     ;; (DE) <- A      
+0x036d  NOP                      
+0x036e  NOP                      
+0x036f  NOP                      
+0x0370  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0371  DCX                      ;; BC = BC-1      
+0x0372  NOP                      
+0x0373  NOP                      
+0x0374  MVI 0x0f                 ;; H <- byte 2    
+0x0376  DCX                      ;; BC = BC-1      
+0x0377  NOP                      
+0x0378  NOP                      
+0x0379  INR                      ;; B <- B+1       
+0x037a  LXI 0x1b24               ;; D <- byte 3, E <- byte 2
+0x037d  DCR                      ;; H <- H-1       
+0x037e  CM 0x0100                ;; if M, CALL adr 
+0x0381  RST                      ;; CALL $38       
+0x0382  RST                      ;; CALL $38       
+0x0383  NOP                      
+0x0384  NOP                      
+0x0385  NOP                      
+0x0386  NOP                      
+0x0387  MOV                      ;; H <- H         
+0x0388  DCR                      ;; E <- E-1       
+0x0389  RNC                      ;; if NCY, RET    
+0x038a  DAD                      ;; HL = HL + HI   
+0x038b  NOP                      
+0x038c  STAX                     ;; (BC) <- A      
+0x038d  MOV                      ;; D <- H         
+0x038e  DCR                      ;; E <- E-1       
+0x038f  NOP                      
+0x0390  NOP                      
+0x0391  NOP                      
+0x0392  MVI 0x00                 ;; B <- byte 2    
+0x0394  NOP                      
+0x0395  LXI 0x0040               ;; B <- byte 3, C <- byte 2
+0x0398  LXI 0x0000               ;; B <- byte 3, C <- byte 2
+0x039b  NOP                      
+0x039c  SBB                      ;; A <- A - (HL) - CY
+0x039d  NOP                      
+0x039e  NOP                      
+0x039f  INR                      ;; E <-E+1        
+0x03a0  NOP                      
+0x03a1  INX                      ;; BC <- BC+1     
+0x03a2  INR                      ;; B <- B+1       
+0x03a3  MOV                      ;; A <- B         
+0x03a4  INR                      ;; D <- D+1       
+0x03a5  INX                      ;; DE <- DE + 1   
+0x03a6  NOP                      
+0x03a7  LDAX                     ;; A <- (DE)      
+0x03a8  DCR                      ;; A <- A-1       
+0x03a9  MOV                      ;; L <- B         
+0x03aa  CM 0x68fc                ;; if M, CALL adr 
+0x03ad  DCR                      ;; A <- A-1       
+0x03ae  LDAX                     ;; A <- (DE)      
+0x03af  NOP                      
+0x03b0  NOP                      
+0x03b1  NOP                      
+0x03b2  LXI 0x98b8               ;; B <- byte 3, C <- byte 2
+0x03b5  ANA                      ;; A <- A & B     
+0x03b6  DCX                      ;; DE = DE-1      
+0x03b7  NOP                      
+0x03b8  RST                      ;; CALL $38       
+0x03b9  NOP                      
+0x03ba  ANA                      ;; A <- A & B     
+0x03bb  DCX                      ;; DE = DE-1      
+0x03bc  NOP                      
+0x03bd  NOP                      
+0x03be  NOP                      
+0x03bf  NOP                      
+0x03c0  NOP                      
+0x03c1  NOP                      
+0x03c2  NOP                      
+0x03c3  MVI 0x05                 ;; C <- byte 2    
+0x03c5  NOP                      
+0x03c6  NOP                      
+0x03c7  NOP                      
+0x03c8  NOP                      
+0x03c9  NOP                      
+0x03ca  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x03cb  RNC                      ;; if NCY, RET    
+0x03cc  INR                      ;; E <-E+1        
+0x03cd  RZ                       ;; if Z, RET      
+0x03ce  SBB                      ;; A <- A - E - CY
+0x03cf  INX                      ;; BC <- BC+1     
+0x03d0  NOP                      
+0x03d1  NOP                      
+0x03d2  INX                      ;; BC <- BC+1     
+0x03d3  INR                      ;; B <- B+1       
+0x03d4  MOV                      ;; A <- B         
+0x03d5  INR                      ;; D <- D+1       
+0x03d6  DCX                      ;; BC = BC-1      
+0x03d7  DAD                      ;; HL = HL + DE   
+0x03d8  LDA 0xfa6d               ;; A <- (adr)     
+0x03db  JM 0x3a6d                ;; if M, PC <- adr
+0x03de  DAD                      ;; HL = HL + DE   
+0x03df  NOP                      
+0x03e0  NOP                      
+0x03e1  NOP                      
+0x03e2  NOP                      
+0x03e3  NOP                      
+0x03e4  NOP                      
+0x03e5  NOP                      
+0x03e6  NOP                      
+0x03e7  NOP                      
+0x03e8  NOP                      
+0x03e9  LXI 0x0000               ;; B <- byte 3, C <- byte 2
+0x03ec  LXI 0x1f74               ;; B <- byte 3, C <- byte 2
+0x03ef  NOP                      
+0x03f0  ADD                      ;; A <- A + B     
+0x03f1  NOP                      
+0x03f2  NOP                      
+0x03f3  NOP                      
+0x03f4  NOP                      
+0x03f5  NOP                      
+0x03f6  INR                      ;; E <-E+1        
+0x03f7  CMA                      ;; A <- !A        
+0x03f8  NOP                      
+0x03f9  NOP                      
+0x03fa  INR                      ;; E <-E+1        
+0x03fb  DAA                      ;; special        
+0x03fc  NOP                      
+0x03fd  NOP                      
+0x03fe  INR                      ;; E <-E+1        
+0x03ff  DAD                      ;; HL = HL + SP   
+0x0400  NOP                      
+0x0401  NOP                      
+0x0402  DAD                      ;; HL = HL + SP   
+0x0403  MOV                      ;; A <- C         
+0x0404  MOV                      ;; A <- D         
+0x0405  MOV                      ;; L <- (HL)      
+0x0406  CPE 0xfafa               ;; if PE, CALL adr
+0x0409  CPE 0x7a6e               ;; if PE, CALL adr
+0x040c  MOV                      ;; A <- C         
+0x040d  DAD                      ;; HL = HL + SP   
+0x040e  NOP                      
+0x040f  NOP                      
+0x0410  NOP                      
+0x0411  NOP                      
+0x0412  NOP                      
+0x0413  MOV                      ;; A <- B         
+0x0414  DCR                      ;; E <- E-1       
+0x0415  CMP                      ;; A - (HL)       
+0x0416  MOV                      ;; L <- H         
+0x0417  INR                      ;; A <- A+1       
+0x0418  INR                      ;; A <- A+1       
+0x0419  INR                      ;; A <- A+1       
+0x041a  MOV                      ;; L <- H         
+0x041b  CMP                      ;; A - (HL)       
+0x041c  DCR                      ;; E <- E-1       
+0x041d  MOV                      ;; A <- B         
+0x041e  NOP                      
+0x041f  NOP                      
+0x0420  NOP                      
+0x0421  NOP                      
+0x0422  NOP                      
+0x0423  NOP                      
+0x0424  DAD                      ;; HL = HL + DE   
+0x0425  LDA 0xfa6d               ;; A <- (adr)     
+0x0428  JM 0x3a6d                ;; if M, PC <- adr
+0x042b  DAD                      ;; HL = HL + DE   
+0x042c  NOP                      
+0x042d  NOP                      
+0x042e  NOP                      
+0x042f  NOP                      
+0x0430  NOP                      
+0x0431  NOP                      
+0x0432  NOP                      
+0x0433  MOV                      ;; A <- D         
+0x0434  MOV                      ;; A <- A         
+0x0435  MOV                      ;; L <- L         
+0x0436  CPE 0xfafa               ;; if PE, CALL adr
+0x0439  CPE 0x7f6d               ;; if PE, CALL adr
+0x043c  MOV                      ;; A <- D         
+0x043d  NOP                      
+0x043e  NOP                      
+0x043f  NOP                      
+0x0440  NOP                      
+0x0441  NOP                      
+0x0442  NOP                      
+0x0443  MVI 0x18                 ;; C <- byte 2    
+0x0445  CMP                      ;; A - (HL)       
+0x0446  MOV                      ;; L <- L         
+0x0447  DCR                      ;; A <- A-1       
+0x0448  INR                      ;; A <- A+1       
+0x0449  DCR                      ;; A <- A-1       
+0x044a  MOV                      ;; L <- L         
+0x044b  CMP                      ;; A - (HL)       
+0x044c  NOP                      
+0x044d  MVI 0x00                 ;; C <- byte 2    
+0x044f  NOP                      
+0x0450  NOP                      
+0x0451  NOP                      
+0x0452  NOP                      
+0x0453  NOP                      
+0x0454  LDAX                     ;; A <- (DE)      
+0x0455  DCR                      ;; A <- A-1       
+0x0456  MOV                      ;; L <- B         
+0x0457  CM 0x68fc                ;; if M, CALL adr 
+0x045a  DCR                      ;; A <- A-1       
+0x045b  LDAX                     ;; A <- (DE)      
+0x045c  NOP                      
+0x045d  NOP                      
+0x045e  NOP                      
+0x045f  NOP                      
+0x0460  NOP                      
+0x0461  NOP                      
+0x0462  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0463  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0464  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0465  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0466  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0467  MOV                      ;; A <- A         
+0x0468  RST                      ;; CALL $38       
+0x0469  MOV                      ;; A <- A         
+0x046a  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x046b  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x046c  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x046d  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x046e  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x046f  NOP                      
+0x0470  NOP                      
+0x0471  INR                      ;; B <- B+1       
+0x0472  LXI 0x0313               ;; B <- byte 3, C <- byte 2
+0x0475  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0476  ORA                      ;; A <- A | E     
+0x0477  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0478  CMA                      ;; A <- !A        
+0x0479  INX                      ;; BC <- BC+1     
+0x047a  CMA                      ;; A <- !A        
+0x047b  MOV                      ;; C <- C         
+0x047c  INR                      ;; B <- B+1       
+0x047d  INX                      ;; BC <- BC+1     
+0x047e  NOP                      
+0x047f  LXI 0x0840               ;; B <- byte 3, C <- byte 2
+0x0482  DCR                      ;; B <- B-1       
+0x0483  ANA                      ;; A <- A & E     
+0x0484  LDAX                     ;; A <- (BC)      
+0x0485  INX                      ;; BC <- BC+1     
+0x0486  MOV                      ;; E <- E         
+0x0487  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0488  DAA                      ;; special        
+0x0489  DAA                      ;; special        
+0x048a  DCX                      ;; BC = BC-1      
+0x048b  MOV                      ;; C <- E         
+0x048c  MOV                      ;; B <- B         
+0x048d  ADD                      ;; A <- A + H     
+0x048e  LXI 0x0f48               ;; D <- byte 3, E <- byte 2
+0x0491  SBB                      ;; A <- A - C - CY
+0x0492  INR                      ;; A <- A+1       
+0x0493  MOV                      ;; A <- (HL)      
+0x0494  DCR                      ;; A <- A-1       
+0x0495  CMP                      ;; A - H          
+0x0496  MVI 0x7c                 ;; A <- byte 2    
+0x0498  SBB                      ;; A <- A - C - CY
+0x0499  DAA                      ;; special        
+0x049a  DCX                      ;; DE = DE-1      
+0x049b  LDAX                     ;; A <- (DE)      
+0x049c  MVI 0x0f                 ;; H <- byte 2    
+0x049e  MVI 0x08                 ;; C <- byte 2    
+0x04a0  DCR                      ;; C <-C-1        
+0x04a1  INX                      ;; DE <- DE + 1   
+0x04a2  STAX                     ;; (DE) <- A      
+0x04a3  NOP                      
+0x04a4  STAX                     ;; (DE) <- A      
+0x04a5  STAX                     ;; (BC) <- A      
+0x04a6  MVI 0x11                 ;; C <- byte 2    
+0x04a8  INR                      ;; B <- B+1       
+0x04a9  MVI 0x00                 ;; H <- byte 2    
+0x04ab  INX                      ;; BC <- BC+1     
+0x04ac  DCR                      ;; D <- D-1       
+0x04ad  NOP                      
+0x04ae  DCR                      ;; C <-C-1        
+0x04af  STAX                     ;; (BC) <- A      
+0x04b0  INR                      ;; B <- B+1       
+0x04b1  MVI 0x13                 ;; H <- byte 2    
+0x04b3  NOP                      
+0x04b4  LXI 0x040b               ;; B <- byte 3, C <- byte 2
+0x04b7  NOP                      
+0x04b8  STAX                     ;; (BC) <- A      
+0x04b9  NOP                      
+0x04ba  NOP                      
+0x04bb  NOP                      
+0x04bc  INX                      ;; DE <- DE + 1   
+0x04bd  NOP                      
+0x04be  DCX                      ;; BC = BC-1      
+0x04bf  INX                      ;; DE <- DE + 1   
+0x04c0  NOP                      
+0x04c1  NOP                      
+0x04c2  MOV                      ;; C <- C         
+0x04c3  SHLD 0x8114              ;; (adr) <-L; (adr+1)<-H
+0x04c6  MOV                      ;; B <- D         
+0x04c7  NOP                      
+0x04c8  MOV                      ;; B <- D         
+0x04c9  ADD                      ;; A <- A + C     
+0x04ca  INR                      ;; D <- D+1       
+0x04cb  SHLD 0x0849              ;; (adr) <-L; (adr+1)<-H
+0x04ce  NOP                      
+0x04cf  NOP                      
+0x04d0  MOV                      ;; B <- H         
+0x04d1  XRA                      ;; A <- A ^ D     
+0x04d2  NOP                      
+0x04d3  ADC                      ;; A <- A + B + CY
+0x04d4  MOV                      ;; D <- H         
+0x04d5  SHLD 0xaa10              ;; (adr) <-L; (adr+1)<-H
+0x04d8  MOV                      ;; B <- H         
+0x04d9  SHLD 0x8854              ;; (adr) <-L; (adr+1)<-H
+0x04dc  MOV                      ;; C <- D         
+0x04dd  DCR                      ;; D <- D-1       
+0x04de  CMP                      ;; A - (HL)       
+0x04df  CMC                      ;; CY=!CY         
+0x04e0  MOV                      ;; E <- (HL)      
+0x04e1  DCR                      ;; H <- H-1       
+0x04e2  INR                      ;; B <- B+1       
+0x04e3  CM 0x1004                ;; if M, CALL adr 
+0x04e6  CM 0x2010                ;; if M, CALL adr 
+0x04e9  CM 0x8020                ;; if M, CALL adr 
+0x04ec  CM 0x0080                ;; if M, CALL adr 
+0x04ef  CPI 0x00                 ;; A - data       
+0x04f1  INR                      ;; H <- H+1       
+0x04f2  CPI 0x12                 ;; A - data       
+0x04f4  NOP                      
+0x04f5  CPI 0x00                 ;; A - data       
+0x04f7  MOV                      ;; C <- B         
+0x04f8  CPI 0x90                 ;; A - data       
+0x04fa  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x04fb  DCX                      ;; BC = BC-1      
+0x04fc  NOP                      
+0x04fd  DAD                      ;; HL = HL + HI   
+0x04fe  NOP                      
+0x04ff  NOP                      
+0x0500  LXI 0x0107               ;; B <- byte 3, C <- byte 2
+0x0503  LXI 0x0401               ;; B <- byte 3, C <- byte 2
+0x0506  DCX                      ;; BC = BC-1      
+0x0507  LXI 0x0306               ;; B <- byte 3, C <- byte 2
+0x050a  LXI 0x0b01               ;; B <- byte 3, C <- byte 2
+0x050d  DAD                      ;; HL = HL + BC   
+0x050e  STAX                     ;; (BC) <- A      
+0x050f  NOP                      
+0x0510  STAX                     ;; (BC) <- A      
+0x0511  DCX                      ;; BC = BC-1      
+0x0512  INR                      ;; B <- B+1       
+0x0513  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0514  LDAX                     ;; A <- (BC)      
+0x0515  DCR                      ;; B <- B-1       
+0x0516  STAX                     ;; (BC) <- A      
+0x0517  DCR                      ;; B <- B-1       
+0x0518  INR                      ;; B <- B+1       
+0x0519  MVI 0x07                 ;; B <- byte 2    
+0x051b  NOP                      
+0x051c  LDAX                     ;; A <- (BC)      
+0x051d  MVI 0x0a                 ;; B <- byte 2    
+0x051f  INX                      ;; BC <- BC+1     
+0x0520  RST                      ;; CALL $38       
+0x0521  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0522  RST                      ;; CALL $38       
+0x0523  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0524  RST                      ;; CALL $38       
+0x0525  CMC                      ;; CY=!CY         
+0x0526  RST                      ;; CALL $38       
+0x0527  MOV                      ;; A <- A         
+0x0528  RST                      ;; CALL $38       
+0x0529  RST                      ;; CALL $38       
+0x052a  CM 0xf8ff                ;; if M, CALL adr 
+0x052d  RST                      ;; CALL $38       
+0x052e  RP                       ;; if P, RET      
+0x052f  RST                      ;; CALL $38       
+0x0530  RP                       ;; if P, RET      
+0x0531  RST                      ;; CALL $38       
+0x0532  RP                       ;; if P, RET      
+0x0533  RST                      ;; CALL $38       
+0x0534  RP                       ;; if P, RET      
+0x0535  RST                      ;; CALL $38       
+0x0536  RP                       ;; if P, RET      
+0x0537  RST                      ;; CALL $38       
+0x0538  RP                       ;; if P, RET      
+0x0539  RST                      ;; CALL $38       
+0x053a  RP                       ;; if P, RET      
+0x053b  RST                      ;; CALL $38       
+0x053c  RM                       ;; if M, RET      
+0x053d  RST                      ;; CALL $38       
+0x053e  CM 0xffff                ;; if M, CALL adr 
+0x0541  RST                      ;; CALL $38       
+0x0542  RST                      ;; CALL $38       
+0x0543  RST                      ;; CALL $38       
+0x0544  RST                      ;; CALL $38       
+0x0545  MOV                      ;; A <- A         
+0x0546  RST                      ;; CALL $38       
+0x0547  CMC                      ;; CY=!CY         
+0x0548  RST                      ;; CALL $38       
+0x0549  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x054a  RST                      ;; CALL $38       
+0x054b  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x054c  DCR                      ;; B <- B-1       
+0x054d  NOP                      
+0x054e  DCR                      ;; D <- D-1       
+0x054f  NOP                      
+0x0550  SUB                      ;; A <- A + H     
+0x0551  SUB                      ;; A <- A - A     
+0x0552  SBB                      ;; A <- A - D - CY
+0x0553  SBB                      ;; A <- A - L - CY
+0x0554  NOP                      
+0x0555  DCR                      ;; B <- B-1       
+0x0556  DCR                      ;; B <- B-1       
+0x0557  NOP                      
+0x0558  DCR                      ;; D <- D-1       
+0x0559  NOP                      
+0x055a  NOP                      
+0x055b  DCR                      ;; B <- B-1       
+0x055c  NOP                      
+0x055d  NOP                      
+0x055e  NOP                      
+0x055f  NOP                      
+0x0560  DCR                      ;; B <- B-1       
+0x0561  DCR                      ;; D <- D-1       
+0x0562  NOP                      
+0x0563  DCR                      ;; B <- B-1       
+0x0564  NOP                      
+0x0565  NOP                      
+0x0566  NOP                      
+0x0567  NOP                      
+0x0568  INR                      ;; B <- B+1       
+0x0569  INR                      ;; C <- C+1       
+0x056a  MVI 0x37                 ;; E <- byte 2    
+0x056c  MVI 0x7c                 ;; A <- byte 2    
+0x056e  MOV                      ;; (HL) <- H      
+0x056f  MOV                      ;; A <- (HL)      
+0x0570  MOV                      ;; A <- (HL)      
+0x0571  MOV                      ;; (HL) <- H      
+0x0572  MOV                      ;; A <- H         
+0x0573  MVI 0x37                 ;; A <- byte 2    
+0x0575  MVI 0x0c                 ;; E <- byte 2    
+0x0577  INR                      ;; B <- B+1       
+0x0578  NOP                      
+0x0579  NOP                      
+0x057a  NOP                      
+0x057b  NOP                      
+0x057c  NOP                      
+0x057d  SHLD 0xa500              ;; (adr) <-L; (adr+1)<-H
+0x0580  MOV                      ;; B <- B         
+0x0581  NOP                      
+0x0582  SBB                      ;; A <- A - B - CY
+0x0583  DCR                      ;; A <- A-1       
+0x0584  ORA                      ;; A <- A | (HL)  
+0x0585  INR                      ;; A <- A+1       
+0x0586  MVI 0x1d                 ;; (HL) <- byte 2 
+0x0588  NOP                      
+0x0589  MOV                      ;; C <- B         
+0x058a  MOV                      ;; H <- D         
+0x058b  ORA                      ;; A <- A | (HL)  
+0x058c  DCR                      ;; E <- E-1       
+0x058d  SBB                      ;; A <- A - B - CY
+0x058e  NOP                      
+0x058f  MOV                      ;; B <- D         
+0x0590  SUB                      ;; A <- A - B     
+0x0591  NOP                      
+0x0592  NOP                      
+0x0593  NOP                      
+0x0594  MVI 0x1f                 ;; H <- byte 2    
+0x0596  LDAX                     ;; A <- (DE)      
+0x0597  DCX                      ;; DE = DE-1      
+0x0598  LDAX                     ;; A <- (DE)      
+0x0599  LDAX                     ;; A <- (DE)      
+0x059a  DCX                      ;; DE = DE-1      
+0x059b  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x059c  LDAX                     ;; A <- (DE)      
+0x059d  DCR                      ;; E <- E-1       
+0x059e  LDAX                     ;; A <- (DE)      
+0x059f  LDAX                     ;; A <- (DE)      
+0x05a0  NOP                      
+0x05a1  NOP                      
+0x05a2  NOP                      
+0x05a3  MOV                      ;; H <- B         
+0x05a4  MOV                      ;; D <- B         
+0x05a5  MOV                      ;; C <- B         
+0x05a6  MOV                      ;; C <- B         
+0x05a7  MOV                      ;; C <- B         
+0x05a8  MOV                      ;; B <- B         
+0x05a9  MOV                      ;; B <- B         
+0x05aa  MOV                      ;; B <- B         
+0x05ab  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x05ac  DCX                      ;; BC = BC-1      
+0x05ad  NOP                      
+0x05ae  NOP                      
+0x05af  STAX                     ;; (DE) <- A      
+0x05b0  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x05b1  NOP                      
+0x05b2  STAX                     ;; (BC) <- A      
+0x05b3  INR                      ;; B <- B+1       
+0x05b4  MVI 0x26                 ;; H <- byte 2    
+0x05b6  NOP                      
+0x05b7  DCR                      ;; C <-C-1        
+0x05b8  DCR                      ;; D <- D-1       
+0x05b9  NOP                      
+0x05ba  INX                      ;; BC <- BC+1     
+0x05bb  INR                      ;; B <- B+1       
+0x05bc  LXI 0x0e12               ;; D <- byte 3, E <- byte 2
+0x05bf  INR                      ;; L <- L+1       
+0x05c0  MOV                      ;; L <- B         
+0x05c1  DCR                      ;; E <- E-1       
+0x05c2  INR                      ;; C <- C+1       
+0x05c3  INR                      ;; L <- L+1       
+0x05c4  NOP                      
+0x05c5  INR                      ;; E <-E+1        
+0x05c6  LDAX                     ;; A <- (BC)      
+0x05c7  INR                      ;; L <- L+1       
+0x05c8  MOV                      ;; B <- B         
+0x05c9  INR                      ;; E <-E+1        
+0x05ca  NOP                      
+0x05cb  INR                      ;; L <- L+1       
+0x05cc  NOP                      
+0x05cd  INR                      ;; E <-E+1        
+0x05ce  RST                      ;; CALL $38       
+0x05cf  MVI 0x2e                 ;; C <- byte 2    
+0x05d1  RPO                      ;; if PO, RET     
+0x05d2  DCR                      ;; E <- E-1       
+0x05d3  INR                      ;; C <- C+1       
+0x05d4  MVI 0xea                 ;; L <- byte 2    
+0x05d6  DCR                      ;; E <- E-1       
+0x05d7  LDAX                     ;; A <- (BC)      
+0x05d8  MVI 0xf4                 ;; L <- byte 2    
+0x05da  DCR                      ;; E <- E-1       
+0x05db  NOP                      
+0x05dc  MVI 0x99                 ;; L <- byte 2    
+0x05de  INR                      ;; E <-E+1        
+0x05df  RST                      ;; CALL $38       
+0x05e0  DAA                      ;; special        
+0x05e1  NOP                      
+0x05e2  MVI 0x0c                 ;; H <- byte 2    
+0x05e4  NOP                      
+0x05e5  STAX                     ;; (DE) <- A      
+0x05e6  INX                      ;; DE <- DE + 1   
+0x05e7  INR                      ;; B <- B+1       
+0x05e8  LXI 0x2718               ;; D <- byte 3, E <- byte 2
+0x05eb  DCR                      ;; E <- E-1       
+0x05ec  LDAX                     ;; A <- (DE)      
+0x05ed  MVI 0x0f                 ;; H <- byte 2    
+0x05ef  MVI 0x08                 ;; C <- byte 2    
+0x05f1  DCR                      ;; C <-C-1        
+0x05f2  INX                      ;; DE <- DE + 1   
+0x05f3  STAX                     ;; (DE) <- A      
+0x05f4  DAA                      ;; special        
+0x05f5  INR                      ;; E <-E+1        
+0x05f6  LDAX                     ;; A <- (DE)      
+0x05f7  MVI 0x0f                 ;; H <- byte 2    
+0x05f9  MVI 0x08                 ;; C <- byte 2    
+0x05fb  DCR                      ;; C <-C-1        
+0x05fc  INX                      ;; DE <- DE + 1   
+0x05fd  STAX                     ;; (DE) <- A      
+0x05fe  NOP                      
+0x05ff  NOP                      
+0x0600  NOP                      
+0x0601  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0602  INR                      ;; H <- H+1       
+0x0603  MOV                      ;; B <- H         
+0x0604  INR                      ;; H <- H+1       
+0x0605  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x0606  NOP                      
+0x0607  NOP                      
+0x0608  NOP                      
+0x0609  MOV                      ;; A <- A         
+0x060a  MOV                      ;; C <- C         
+0x060b  MOV                      ;; C <- C         
+0x060c  MOV                      ;; C <- C         
+0x060d  MVI 0x00                 ;; (HL) <- byte 2 
+0x060f  NOP                      
+0x0610  NOP                      
+0x0611  MVI 0x41                 ;; A <- byte 2    
+0x0613  MOV                      ;; B <- C         
+0x0614  MOV                      ;; B <- C         
+0x0615  SHLD 0x0000              ;; (adr) <-L; (adr+1)<-H
+0x0618  NOP                      
+0x0619  MOV                      ;; A <- A         
+0x061a  MOV                      ;; B <- C         
+0x061b  MOV                      ;; B <- C         
+0x061c  MOV                      ;; B <- C         
+0x061d  MVI 0x00                 ;; A <- byte 2    
+0x061f  NOP                      
+0x0620  NOP                      
+0x0621  MOV                      ;; A <- A         
+0x0622  MOV                      ;; C <- C         
+0x0623  MOV                      ;; C <- C         
+0x0624  MOV                      ;; C <- C         
+0x0625  MOV                      ;; B <- C         
+0x0626  NOP                      
+0x0627  NOP                      
+0x0628  NOP                      
+0x0629  MOV                      ;; A <- A         
+0x062a  MOV                      ;; C <- B         
+0x062b  MOV                      ;; C <- B         
+0x062c  MOV                      ;; C <- B         
+0x062d  MOV                      ;; B <- B         
+0x062e  NOP                      
+0x062f  NOP                      
+0x0630  NOP                      
+0x0631  MVI 0x41                 ;; A <- byte 2    
+0x0633  MOV                      ;; B <- C         
+0x0634  MOV                      ;; B <- L         
+0x0635  MOV                      ;; B <- A         
+0x0636  NOP                      
+0x0637  NOP                      
+0x0638  NOP                      
+0x0639  MOV                      ;; A <- A         
+0x063a  NOP                      
+0x063b  NOP                      
+0x063c  NOP                      
+0x063d  MOV                      ;; A <- A         
+0x063e  NOP                      
+0x063f  NOP                      
+0x0640  NOP                      
+0x0641  NOP                      
+0x0642  MOV                      ;; B <- C         
+0x0643  MOV                      ;; A <- A         
+0x0644  MOV                      ;; B <- C         
+0x0645  NOP                      
+0x0646  NOP                      
+0x0647  NOP                      
+0x0648  NOP                      
+0x0649  STAX                     ;; (BC) <- A      
+0x064a  LXI 0x0101               ;; B <- byte 3, C <- byte 2
+0x064d  MOV                      ;; A <- (HL)      
+0x064e  NOP                      
+0x064f  NOP                      
+0x0650  NOP                      
+0x0651  MOV                      ;; A <- A         
+0x0652  NOP                      
+0x0653  INR                      ;; D <- D+1       
+0x0654  SHLD 0x0041              ;; (adr) <-L; (adr+1)<-H
+0x0657  NOP                      
+0x0658  NOP                      
+0x0659  MOV                      ;; A <- A         
+0x065a  LXI 0x0101               ;; B <- byte 3, C <- byte 2
+0x065d  LXI 0x0000               ;; B <- byte 3, C <- byte 2
+0x0660  NOP                      
+0x0661  MOV                      ;; A <- A         
+0x0662  NOP                      
+0x0663  NOP                      
+0x0664  NOP                      
+0x0665  MOV                      ;; A <- A         
+0x0666  NOP                      
+0x0667  NOP                      
+0x0668  NOP                      
+0x0669  MOV                      ;; A <- A         
+0x066a  NOP                      
+0x066b  NOP                      
+0x066c  INR                      ;; B <- B+1       
+0x066d  MOV                      ;; A <- A         
+0x066e  NOP                      
+0x066f  NOP                      
+0x0670  NOP                      
+0x0671  MVI 0x41                 ;; A <- byte 2    
+0x0673  MOV                      ;; B <- C         
+0x0674  MOV                      ;; B <- C         
+0x0675  MVI 0x00                 ;; A <- byte 2    
+0x0677  NOP                      
+0x0678  NOP                      
+0x0679  MOV                      ;; A <- A         
+0x067a  MOV                      ;; C <- B         
+0x067b  MOV                      ;; C <- B         
+0x067c  MOV                      ;; C <- B         
+0x067d  NOP                      
+0x067e  NOP                      
+0x067f  NOP                      
+0x0680  NOP                      
+0x0681  MVI 0x41                 ;; A <- byte 2    
+0x0683  MOV                      ;; B <- L         
+0x0684  MOV                      ;; B <- D         
+0x0685  DCR                      ;; A <- A-1       
+0x0686  NOP                      
+0x0687  NOP                      
+0x0688  NOP                      
+0x0689  MOV                      ;; A <- A         
+0x068a  MOV                      ;; C <- B         
+0x068b  MOV                      ;; C <- H         
+0x068c  MOV                      ;; C <- D         
+0x068d  LXI 0x0000               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x0690  NOP                      
+0x0691  STA 0x4949               ;; (adr) <- A     
+0x0694  MOV                      ;; C <- C         
+0x0695  MVI 0x00                 ;; H <- byte 2    
+0x0697  NOP                      
+0x0698  NOP                      
+0x0699  MOV                      ;; B <- B         
+0x069a  MOV                      ;; B <- B         
+0x069b  MOV                      ;; A <- A         
+0x069c  MOV                      ;; B <- B         
+0x069d  MOV                      ;; B <- B         
+0x069e  NOP                      
+0x069f  NOP                      
+0x06a0  NOP                      
+0x06a1  MOV                      ;; A <- (HL)      
+0x06a2  LXI 0x0101               ;; B <- byte 3, C <- byte 2
+0x06a5  MOV                      ;; A <- (HL)      
+0x06a6  NOP                      
+0x06a7  NOP                      
+0x06a8  NOP                      
+0x06a9  MOV                      ;; A <- H         
+0x06aa  STAX                     ;; (BC) <- A      
+0x06ab  LXI 0x7c02               ;; B <- byte 3, C <- byte 2
+0x06ae  NOP                      
+0x06af  NOP                      
+0x06b0  NOP                      
+0x06b1  MOV                      ;; A <- A         
+0x06b2  STAX                     ;; (BC) <- A      
+0x06b3  INR                      ;; C <- C+1       
+0x06b4  STAX                     ;; (BC) <- A      
+0x06b5  MOV                      ;; A <- A         
+0x06b6  NOP                      
+0x06b7  NOP                      
+0x06b8  NOP                      
+0x06b9  MOV                      ;; H <- E         
+0x06ba  INR                      ;; D <- D+1       
+0x06bb  NOP                      
+0x06bc  INR                      ;; D <- D+1       
+0x06bd  MOV                      ;; H <- E         
+0x06be  NOP                      
+0x06bf  NOP                      
+0x06c0  NOP                      
+0x06c1  MOV                      ;; H <- B         
+0x06c2  NOP                      
+0x06c3  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x06c4  NOP                      
+0x06c5  MOV                      ;; H <- B         
+0x06c6  NOP                      
+0x06c7  NOP                      
+0x06c8  NOP                      
+0x06c9  MOV                      ;; B <- E         
+0x06ca  MOV                      ;; B <- L         
+0x06cb  MOV                      ;; C <- C         
+0x06cc  MOV                      ;; D <- C         
+0x06cd  MOV                      ;; H <- C         
+0x06ce  NOP                      
+0x06cf  NOP                      
+0x06d0  NOP                      
+0x06d1  MVI 0x45                 ;; A <- byte 2    
+0x06d3  MOV                      ;; C <- C         
+0x06d4  MOV                      ;; D <- C         
+0x06d5  MVI 0x00                 ;; A <- byte 2    
+0x06d7  NOP                      
+0x06d8  NOP                      
+0x06d9  NOP                      
+0x06da  LXI 0x017f               ;; H <- byte 3, L <- byte 2
+0x06dd  NOP                      
+0x06de  NOP                      
+0x06df  NOP                      
+0x06e0  NOP                      
+0x06e1  INX                      ;; HL <- HL + 1   
+0x06e2  MOV                      ;; B <- L         
+0x06e3  MOV                      ;; C <- C         
+0x06e4  MOV                      ;; C <- C         
+0x06e5  LXI 0x0000               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x06e8  NOP                      
+0x06e9  MOV                      ;; B <- D         
+0x06ea  MOV                      ;; B <- C         
+0x06eb  MOV                      ;; C <- C         
+0x06ec  MOV                      ;; E <- C         
+0x06ed  MOV                      ;; H <- (HL)      
+0x06ee  NOP                      
+0x06ef  NOP                      
+0x06f0  NOP                      
+0x06f1  INR                      ;; C <- C+1       
+0x06f2  INR                      ;; D <- D+1       
+0x06f3  INR                      ;; H <- H+1       
+0x06f4  MOV                      ;; A <- A         
+0x06f5  INR                      ;; B <- B+1       
+0x06f6  NOP                      
+0x06f7  NOP                      
+0x06f8  NOP                      
+0x06f9  MOV                      ;; (HL) <- D      
+0x06fa  MOV                      ;; D <- C         
+0x06fb  MOV                      ;; D <- C         
+0x06fc  MOV                      ;; D <- C         
+0x06fd  MOV                      ;; C <- (HL)      
+0x06fe  NOP                      
+0x06ff  NOP                      
+0x0700  NOP                      
+0x0701  MVI 0x29                 ;; E <- byte 2    
+0x0703  MOV                      ;; C <- C         
+0x0704  MOV                      ;; C <- C         
+0x0705  MOV                      ;; B <- (HL)      
+0x0706  NOP                      
+0x0707  NOP                      
+0x0708  NOP                      
+0x0709  MOV                      ;; B <- B         
+0x070a  MOV                      ;; B <- A         
+0x070b  MOV                      ;; C <- B         
+0x070c  MOV                      ;; D <- B         
+0x070d  MOV                      ;; H <- B         
+0x070e  NOP                      
+0x070f  NOP                      
+0x0710  NOP                      
+0x0711  MVI 0x49                 ;; (HL) <- byte 2 
+0x0713  MOV                      ;; C <- C         
+0x0714  MOV                      ;; C <- C         
+0x0715  MVI 0x00                 ;; (HL) <- byte 2 
+0x0717  NOP                      
+0x0718  NOP                      
+0x0719  LXI 0x4949               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x071c  MOV                      ;; C <- D         
+0x071d  INR                      ;; A <- A+1       
+0x071e  NOP                      
+0x071f  NOP                      
+0x0720  NOP                      
+0x0721  NOP                      
+0x0722  INR                      ;; D <- D+1       
+0x0723  SHLD 0x0041              ;; (adr) <-L; (adr+1)<-H
+0x0726  NOP                      
+0x0727  NOP                      
+0x0728  NOP                      
+0x0729  NOP                      
+0x072a  MOV                      ;; B <- C         
+0x072b  SHLD 0x0814              ;; (adr) <-L; (adr+1)<-H
+0x072e  NOP                      
+0x072f  NOP                      
+0x0730  NOP                      
+0x0731  NOP                      
+0x0732  NOP                      
+0x0733  NOP                      
+0x0734  NOP                      
+0x0735  NOP                      
+0x0736  NOP                      
+0x0737  NOP                      
+0x0738  NOP                      
+0x0739  INR                      ;; D <- D+1       
+0x073a  INR                      ;; D <- D+1       
+0x073b  INR                      ;; D <- D+1       
+0x073c  INR                      ;; D <- D+1       
+0x073d  INR                      ;; D <- D+1       
+0x073e  NOP                      
+0x073f  NOP                      
+0x0740  NOP                      
+0x0741  SHLD 0x7f14              ;; (adr) <-L; (adr+1)<-H
+0x0744  INR                      ;; D <- D+1       
+0x0745  SHLD 0x0000              ;; (adr) <-L; (adr+1)<-H
+0x0748  NOP                      
+0x0749  INX                      ;; BC <- BC+1     
+0x074a  INR                      ;; B <- B+1       
+0x074b  MOV                      ;; A <- B         
+0x074c  INR                      ;; B <- B+1       
+0x074d  INX                      ;; BC <- BC+1     
+0x074e  NOP                      
+0x074f  NOP                      
+0x0750  INR                      ;; H <- H+1       
+0x0751  DCX                      ;; DE = DE-1      
+0x0752  MVI 0x0e                 ;; H <- byte 2    
+0x0754  LXI 0x1c26               ;; D <- byte 3, E <- byte 2
+0x0757  MVI 0x0f                 ;; H <- byte 2    
+0x0759  DCX                      ;; BC = BC-1      
+0x075a  NOP                      
+0x075b  NOP                      
+0x075c  INR                      ;; B <- B+1       
+0x075d  LXI 0x2512               ;; D <- byte 3, E <- byte 2
+0x0760  MVI 0x26                 ;; H <- byte 2    
+0x0762  NOP                      
+0x0763  DCX                      ;; DE = DE-1      
+0x0764  MVI 0x0f                 ;; H <- byte 2    
+0x0766  DCX                      ;; BC = BC-1      
+0x0767  NOP                      
+0x0768  NOP                      
+0x0769  INR                      ;; B <- B+1       
+0x076a  LXI 0x2626               ;; D <- byte 3, E <- byte 2
+0x076d  DCX                      ;; DE = DE-1      
+0x076e  MVI 0x02                 ;; H <- byte 2    
+0x0770  MVI 0x08                 ;; C <- byte 2    
+0x0772  DCR                      ;; C <-C-1        
+0x0773  MVI 0x01                 ;; H <- byte 2    
+0x0775  LXI 0x0000               ;; B <- byte 3, C <- byte 2
+0x0778  LXI 0x0200               ;; B <- byte 3, C <- byte 2
+0x077b  LXI 0x0200               ;; B <- byte 3, C <- byte 2
+0x077e  LXI 0x6000               ;; B <- byte 3, C <- byte 2
+0x0781  NOP                      
+0x0782  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0783  NOP                      
+0x0784  MOV                      ;; H <- B         
+0x0785  NOP                      
+0x0786  NOP                      
+0x0787  LDAX                     ;; A <- (DE)      
+0x0788  DCR                      ;; A <- A-1       
+0x0789  MOV                      ;; L <- B         
+0x078a  CM 0x68fc                ;; if M, CALL adr 
+0x078d  DCR                      ;; A <- A-1       
+0x078e  LDAX                     ;; A <- (DE)      
+0x078f  NOP                      
+0x0790  NOP                      
+0x0791  DCR                      ;; C <-C-1        
+0x0792  STAX                     ;; (DE) <- A      
+0x0793  INR                      ;; B <- B+1       
+0x0794  LXI 0x2613               ;; D <- byte 3, E <- byte 2
+0x0797  MVI 0x02                 ;; H <- byte 2    
+0x0799  MVI 0x08                 ;; C <- byte 2    
+0x079b  DCR                      ;; C <-C-1        
+0x079c  DCR                      ;; C <-C-1        
+0x079d  LHLD 0x1f50              ;; L <- (adr); H<-(adr+1)
+0x07a0  LDAX                     ;; A <- (BC)      
+0x07a1  LHLD 0x1f62              ;; L <- (adr); H<-(adr+1)
+0x07a4  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x07a5  LHLD 0x1fe1              ;; L <- (adr); H<-(adr+1)
+0x07a8  RST                      ;; CALL $38       
+0x07a9  STAX                     ;; (BC) <- A      
+0x07aa  LXI 0x0304               ;; D <- byte 3, E <- byte 2
+0x07ad  NOP                      
+0x07ae  INX                      ;; DE <- DE + 1   
+0x07af  MVI 0x00                 ;; H <- byte 2    
+0x07b1  MOV                      ;; H <- B         
+0x07b2  NOP                      
+0x07b3  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x07b4  NOP                      
+0x07b5  MOV                      ;; H <- B         
+0x07b6  NOP                      
+0x07b7  DAD                      ;; HL = HL + DE   
+0x07b8  LDA 0xfa6d               ;; A <- (adr)     
+0x07bb  JM 0x3a6d                ;; if M, PC <- adr
+0x07be  DAD                      ;; HL = HL + DE   
+0x07bf  NOP                      
+0x07c0  NOP                      
+0x07c1  NOP                      
+0x07c2  MOV                      ;; B <- B         
+0x07c3  MOV                      ;; C <- L         
+0x07c4  MOV                      ;; D <- B         
+0x07c5  NOP                      
+0x07c6  NOP                      
+0x07c7  NOP                      
+0x07c8  NOP                      
+0x07c9  NOP                      
+0x07ca  NOP                      
+0x07cb  RST                      ;; CALL $38       
+0x07cc  CMP                      ;; A - B          
+0x07cd  RST                      ;; CALL $38       
+0x07ce  ADD                      ;; A <- A + B     
+0x07cf  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x07d0  NOP                      
+0x07d1  SUB                      ;; A <- A - A     
+0x07d2  NOP                      
+0x07d3  ADD                      ;; A <- A + B     
+0x07d4  RAR                      ;; A = A >> 1; bit 7 = prev bit 7; CY = prev bit 0
+0x07d5  NOP                      
+0x07d6  NOP                      
+0x07d7  LXI 0x22d0               ;; B <- byte 3, C <- byte 2
+0x07da  NOP                      
+0x07db  INR                      ;; E <-E+1        
+0x07dc  NOP                      
+0x07dd  SUB                      ;; A <- A + H     
+0x07de  NOP                      
+0x07df  NOP                      
+0x07e0  INR                      ;; E <-E+1        
+0x07e1  NOP                      
+0x07e2  INR                      ;; E <-E+1        
+0x07e3  MVI 0x0f                 ;; H <- byte 2    
+0x07e5  DCX                      ;; BC = BC-1      
+0x07e6  NOP                      
+0x07e7  NOP                      
+0x07e8  INR                      ;; B <- B+1       
+0x07e9  LXI 0x2612               ;; D <- byte 3, E <- byte 2
+0x07ec  INR                      ;; E <-E+1        
+0x07ed  MVI 0x02                 ;; H <- byte 2    
+0x07ef  MVI 0x08                 ;; C <- byte 2    
+0x07f1  DCR                      ;; C <-C-1        
+0x07f2  STAX                     ;; (DE) <- A      
+0x07f3  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x07f4  INR                      ;; D <- D+1       
+0x07f5  STAX                     ;; (DE) <- A      
+0x07f6  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x07f7  MVI 0x00                 ;; H <- byte 2    
+0x07f9  NOP                      
+0x07fa  NOP                      
+0x07fb  NOP                      
+0x07fc  NOP                      
+0x07fd  NOP                      
+0x07fe  NOP                      
+0x07ff  NOP                      

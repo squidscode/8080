@@ -1,0 +1,1585 @@
+File size: 2048
+0x0000  NOP                      
+0x0001  NOP                      
+0x0002  NOP                      
+0x0003  NOP                      
+0x0004  NOP                      
+0x0005  NOP                      
+0x0006  NOP                      
+0x0007  NOP                      
+0x0008  NOP                      
+0x0009  NOP                      
+0x000a  NOP                      
+0x000b  NOP                      
+0x000c  NOP                      
+0x000d  NOP                      
+0x000e  NOP                      
+0x000f  NOP                      
+0x0010  NOP                      
+0x0011  NOP                      
+0x0012  NOP                      
+0x0013  NOP                      
+0x0014  NOP                      
+0x0015  NOP                      
+0x0016  NOP                      
+0x0017  NOP                      
+0x0018  NOP                      
+0x0019  NOP                      
+0x001a  NOP                      
+0x001b  NOP                      
+0x001c  NOP                      
+0x001d  NOP                      
+0x001e  NOP                      
+0x001f  NOP                      
+0x0020  NOP                      
+0x0021  NOP                      
+0x0022  NOP                      
+0x0023  NOP                      
+0x0024  NOP                      
+0x0025  NOP                      
+0x0026  NOP                      
+0x0027  NOP                      
+0x0028  NOP                      
+0x0029  NOP                      
+0x002a  NOP                      
+0x002b  NOP                      
+0x002c  NOP                      
+0x002d  NOP                      
+0x002e  NOP                      
+0x002f  NOP                      
+0x0030  NOP                      
+0x0031  NOP                      
+0x0032  NOP                      
+0x0033  NOP                      
+0x0034  NOP                      
+0x0035  NOP                      
+0x0036  NOP                      
+0x0037  NOP                      
+0x0038  NOP                      
+0x0039  NOP                      
+0x003a  NOP                      
+0x003b  NOP                      
+0x003c  NOP                      
+0x003d  NOP                      
+0x003e  NOP                      
+0x003f  NOP                      
+0x0040  NOP                      
+0x0041  NOP                      
+0x0042  NOP                      
+0x0043  NOP                      
+0x0044  NOP                      
+0x0045  NOP                      
+0x0046  NOP                      
+0x0047  NOP                      
+0x0048  NOP                      
+0x0049  NOP                      
+0x004a  NOP                      
+0x004b  NOP                      
+0x004c  NOP                      
+0x004d  NOP                      
+0x004e  NOP                      
+0x004f  NOP                      
+0x0050  NOP                      
+0x0051  NOP                      
+0x0052  NOP                      
+0x0053  NOP                      
+0x0054  NOP                      
+0x0055  NOP                      
+0x0056  NOP                      
+0x0057  NOP                      
+0x0058  NOP                      
+0x0059  NOP                      
+0x005a  NOP                      
+0x005b  NOP                      
+0x005c  NOP                      
+0x005d  NOP                      
+0x005e  NOP                      
+0x005f  NOP                      
+0x0060  NOP                      
+0x0061  NOP                      
+0x0062  NOP                      
+0x0063  NOP                      
+0x0064  NOP                      
+0x0065  NOP                      
+0x0066  NOP                      
+0x0067  NOP                      
+0x0068  NOP                      
+0x0069  NOP                      
+0x006a  NOP                      
+0x006b  NOP                      
+0x006c  NOP                      
+0x006d  NOP                      
+0x006e  NOP                      
+0x006f  NOP                      
+0x0070  NOP                      
+0x0071  NOP                      
+0x0072  NOP                      
+0x0073  NOP                      
+0x0074  NOP                      
+0x0075  NOP                      
+0x0076  NOP                      
+0x0077  NOP                      
+0x0078  NOP                      
+0x0079  NOP                      
+0x007a  NOP                      
+0x007b  NOP                      
+0x007c  NOP                      
+0x007d  NOP                      
+0x007e  NOP                      
+0x007f  NOP                      
+0x0080  NOP                      
+0x0081  NOP                      
+0x0082  NOP                      
+0x0083  NOP                      
+0x0084  NOP                      
+0x0085  NOP                      
+0x0086  NOP                      
+0x0087  NOP                      
+0x0088  NOP                      
+0x0089  NOP                      
+0x008a  NOP                      
+0x008b  NOP                      
+0x008c  NOP                      
+0x008d  NOP                      
+0x008e  NOP                      
+0x008f  NOP                      
+0x0090  NOP                      
+0x0091  NOP                      
+0x0092  NOP                      
+0x0093  NOP                      
+0x0094  NOP                      
+0x0095  NOP                      
+0x0096  NOP                      
+0x0097  NOP                      
+0x0098  NOP                      
+0x0099  NOP                      
+0x009a  NOP                      
+0x009b  NOP                      
+0x009c  NOP                      
+0x009d  NOP                      
+0x009e  NOP                      
+0x009f  NOP                      
+0x00a0  NOP                      
+0x00a1  NOP                      
+0x00a2  NOP                      
+0x00a3  NOP                      
+0x00a4  NOP                      
+0x00a5  NOP                      
+0x00a6  NOP                      
+0x00a7  NOP                      
+0x00a8  NOP                      
+0x00a9  NOP                      
+0x00aa  NOP                      
+0x00ab  NOP                      
+0x00ac  NOP                      
+0x00ad  NOP                      
+0x00ae  NOP                      
+0x00af  NOP                      
+0x00b0  NOP                      
+0x00b1  NOP                      
+0x00b2  NOP                      
+0x00b3  NOP                      
+0x00b4  NOP                      
+0x00b5  NOP                      
+0x00b6  NOP                      
+0x00b7  NOP                      
+0x00b8  NOP                      
+0x00b9  NOP                      
+0x00ba  NOP                      
+0x00bb  NOP                      
+0x00bc  NOP                      
+0x00bd  NOP                      
+0x00be  NOP                      
+0x00bf  NOP                      
+0x00c0  NOP                      
+0x00c1  NOP                      
+0x00c2  NOP                      
+0x00c3  NOP                      
+0x00c4  NOP                      
+0x00c5  NOP                      
+0x00c6  NOP                      
+0x00c7  NOP                      
+0x00c8  NOP                      
+0x00c9  NOP                      
+0x00ca  NOP                      
+0x00cb  NOP                      
+0x00cc  NOP                      
+0x00cd  NOP                      
+0x00ce  NOP                      
+0x00cf  NOP                      
+0x00d0  NOP                      
+0x00d1  NOP                      
+0x00d2  NOP                      
+0x00d3  NOP                      
+0x00d4  NOP                      
+0x00d5  NOP                      
+0x00d6  NOP                      
+0x00d7  NOP                      
+0x00d8  NOP                      
+0x00d9  NOP                      
+0x00da  NOP                      
+0x00db  NOP                      
+0x00dc  NOP                      
+0x00dd  NOP                      
+0x00de  NOP                      
+0x00df  NOP                      
+0x00e0  NOP                      
+0x00e1  NOP                      
+0x00e2  NOP                      
+0x00e3  NOP                      
+0x00e4  NOP                      
+0x00e5  NOP                      
+0x00e6  NOP                      
+0x00e7  NOP                      
+0x00e8  NOP                      
+0x00e9  NOP                      
+0x00ea  NOP                      
+0x00eb  NOP                      
+0x00ec  NOP                      
+0x00ed  NOP                      
+0x00ee  NOP                      
+0x00ef  NOP                      
+0x00f0  NOP                      
+0x00f1  NOP                      
+0x00f2  NOP                      
+0x00f3  NOP                      
+0x00f4  NOP                      
+0x00f5  NOP                      
+0x00f6  NOP                      
+0x00f7  NOP                      
+0x00f8  NOP                      
+0x00f9  NOP                      
+0x00fa  NOP                      
+0x00fb  NOP                      
+0x00fc  NOP                      
+0x00fd  NOP                      
+0x00fe  NOP                      
+0x00ff  NOP                      
+0x0100  NOP                      
+0x0101  NOP                      
+0x0102  NOP                      
+0x0103  NOP                      
+0x0104  NOP                      
+0x0105  NOP                      
+0x0106  NOP                      
+0x0107  NOP                      
+0x0108  NOP                      
+0x0109  NOP                      
+0x010a  NOP                      
+0x010b  NOP                      
+0x010c  NOP                      
+0x010d  NOP                      
+0x010e  NOP                      
+0x010f  NOP                      
+0x0110  NOP                      
+0x0111  NOP                      
+0x0112  NOP                      
+0x0113  NOP                      
+0x0114  NOP                      
+0x0115  NOP                      
+0x0116  NOP                      
+0x0117  NOP                      
+0x0118  NOP                      
+0x0119  NOP                      
+0x011a  NOP                      
+0x011b  NOP                      
+0x011c  NOP                      
+0x011d  NOP                      
+0x011e  NOP                      
+0x011f  NOP                      
+0x0120  NOP                      
+0x0121  NOP                      
+0x0122  NOP                      
+0x0123  NOP                      
+0x0124  NOP                      
+0x0125  NOP                      
+0x0126  NOP                      
+0x0127  NOP                      
+0x0128  NOP                      
+0x0129  NOP                      
+0x012a  NOP                      
+0x012b  NOP                      
+0x012c  NOP                      
+0x012d  NOP                      
+0x012e  NOP                      
+0x012f  NOP                      
+0x0130  NOP                      
+0x0131  NOP                      
+0x0132  NOP                      
+0x0133  NOP                      
+0x0134  NOP                      
+0x0135  NOP                      
+0x0136  NOP                      
+0x0137  NOP                      
+0x0138  NOP                      
+0x0139  NOP                      
+0x013a  NOP                      
+0x013b  NOP                      
+0x013c  NOP                      
+0x013d  NOP                      
+0x013e  NOP                      
+0x013f  NOP                      
+0x0140  NOP                      
+0x0141  NOP                      
+0x0142  NOP                      
+0x0143  NOP                      
+0x0144  NOP                      
+0x0145  NOP                      
+0x0146  NOP                      
+0x0147  NOP                      
+0x0148  NOP                      
+0x0149  NOP                      
+0x014a  NOP                      
+0x014b  NOP                      
+0x014c  NOP                      
+0x014d  NOP                      
+0x014e  NOP                      
+0x014f  NOP                      
+0x0150  NOP                      
+0x0151  NOP                      
+0x0152  NOP                      
+0x0153  NOP                      
+0x0154  NOP                      
+0x0155  NOP                      
+0x0156  NOP                      
+0x0157  NOP                      
+0x0158  NOP                      
+0x0159  NOP                      
+0x015a  NOP                      
+0x015b  NOP                      
+0x015c  NOP                      
+0x015d  NOP                      
+0x015e  NOP                      
+0x015f  NOP                      
+0x0160  NOP                      
+0x0161  NOP                      
+0x0162  NOP                      
+0x0163  NOP                      
+0x0164  NOP                      
+0x0165  NOP                      
+0x0166  NOP                      
+0x0167  NOP                      
+0x0168  NOP                      
+0x0169  NOP                      
+0x016a  NOP                      
+0x016b  NOP                      
+0x016c  NOP                      
+0x016d  NOP                      
+0x016e  NOP                      
+0x016f  NOP                      
+0x0170  NOP                      
+0x0171  NOP                      
+0x0172  NOP                      
+0x0173  NOP                      
+0x0174  NOP                      
+0x0175  NOP                      
+0x0176  NOP                      
+0x0177  NOP                      
+0x0178  NOP                      
+0x0179  NOP                      
+0x017a  NOP                      
+0x017b  NOP                      
+0x017c  NOP                      
+0x017d  NOP                      
+0x017e  NOP                      
+0x017f  NOP                      
+0x0180  NOP                      
+0x0181  NOP                      
+0x0182  NOP                      
+0x0183  NOP                      
+0x0184  NOP                      
+0x0185  NOP                      
+0x0186  NOP                      
+0x0187  NOP                      
+0x0188  NOP                      
+0x0189  NOP                      
+0x018a  NOP                      
+0x018b  NOP                      
+0x018c  NOP                      
+0x018d  NOP                      
+0x018e  NOP                      
+0x018f  NOP                      
+0x0190  NOP                      
+0x0191  NOP                      
+0x0192  NOP                      
+0x0193  NOP                      
+0x0194  NOP                      
+0x0195  NOP                      
+0x0196  NOP                      
+0x0197  NOP                      
+0x0198  NOP                      
+0x0199  NOP                      
+0x019a  NOP                      
+0x019b  NOP                      
+0x019c  NOP                      
+0x019d  NOP                      
+0x019e  NOP                      
+0x019f  NOP                      
+0x01a0  NOP                      
+0x01a1  NOP                      
+0x01a2  NOP                      
+0x01a3  NOP                      
+0x01a4  NOP                      
+0x01a5  NOP                      
+0x01a6  NOP                      
+0x01a7  NOP                      
+0x01a8  NOP                      
+0x01a9  NOP                      
+0x01aa  NOP                      
+0x01ab  NOP                      
+0x01ac  NOP                      
+0x01ad  NOP                      
+0x01ae  NOP                      
+0x01af  NOP                      
+0x01b0  NOP                      
+0x01b1  NOP                      
+0x01b2  NOP                      
+0x01b3  NOP                      
+0x01b4  NOP                      
+0x01b5  NOP                      
+0x01b6  NOP                      
+0x01b7  NOP                      
+0x01b8  NOP                      
+0x01b9  NOP                      
+0x01ba  NOP                      
+0x01bb  NOP                      
+0x01bc  NOP                      
+0x01bd  NOP                      
+0x01be  NOP                      
+0x01bf  NOP                      
+0x01c0  NOP                      
+0x01c1  NOP                      
+0x01c2  NOP                      
+0x01c3  NOP                      
+0x01c4  NOP                      
+0x01c5  NOP                      
+0x01c6  NOP                      
+0x01c7  NOP                      
+0x01c8  NOP                      
+0x01c9  NOP                      
+0x01ca  NOP                      
+0x01cb  NOP                      
+0x01cc  NOP                      
+0x01cd  NOP                      
+0x01ce  NOP                      
+0x01cf  NOP                      
+0x01d0  NOP                      
+0x01d1  NOP                      
+0x01d2  NOP                      
+0x01d3  NOP                      
+0x01d4  NOP                      
+0x01d5  NOP                      
+0x01d6  NOP                      
+0x01d7  NOP                      
+0x01d8  NOP                      
+0x01d9  NOP                      
+0x01da  NOP                      
+0x01db  NOP                      
+0x01dc  NOP                      
+0x01dd  NOP                      
+0x01de  NOP                      
+0x01df  NOP                      
+0x01e0  NOP                      
+0x01e1  NOP                      
+0x01e2  NOP                      
+0x01e3  NOP                      
+0x01e4  NOP                      
+0x01e5  NOP                      
+0x01e6  NOP                      
+0x01e7  NOP                      
+0x01e8  NOP                      
+0x01e9  NOP                      
+0x01ea  NOP                      
+0x01eb  NOP                      
+0x01ec  NOP                      
+0x01ed  NOP                      
+0x01ee  NOP                      
+0x01ef  NOP                      
+0x01f0  NOP                      
+0x01f1  NOP                      
+0x01f2  NOP                      
+0x01f3  NOP                      
+0x01f4  NOP                      
+0x01f5  NOP                      
+0x01f6  NOP                      
+0x01f7  NOP                      
+0x01f8  NOP                      
+0x01f9  NOP                      
+0x01fa  NOP                      
+0x01fb  NOP                      
+0x01fc  NOP                      
+0x01fd  NOP                      
+0x01fe  NOP                      
+0x01ff  NOP                      
+0x0200  NOP                      
+0x0201  NOP                      
+0x0202  NOP                      
+0x0203  NOP                      
+0x0204  NOP                      
+0x0205  NOP                      
+0x0206  NOP                      
+0x0207  NOP                      
+0x0208  NOP                      
+0x0209  NOP                      
+0x020a  NOP                      
+0x020b  NOP                      
+0x020c  NOP                      
+0x020d  NOP                      
+0x020e  NOP                      
+0x020f  NOP                      
+0x0210  NOP                      
+0x0211  NOP                      
+0x0212  NOP                      
+0x0213  NOP                      
+0x0214  NOP                      
+0x0215  NOP                      
+0x0216  NOP                      
+0x0217  NOP                      
+0x0218  NOP                      
+0x0219  NOP                      
+0x021a  NOP                      
+0x021b  NOP                      
+0x021c  NOP                      
+0x021d  NOP                      
+0x021e  NOP                      
+0x021f  NOP                      
+0x0220  NOP                      
+0x0221  NOP                      
+0x0222  NOP                      
+0x0223  NOP                      
+0x0224  NOP                      
+0x0225  NOP                      
+0x0226  NOP                      
+0x0227  NOP                      
+0x0228  NOP                      
+0x0229  NOP                      
+0x022a  NOP                      
+0x022b  NOP                      
+0x022c  NOP                      
+0x022d  NOP                      
+0x022e  NOP                      
+0x022f  NOP                      
+0x0230  NOP                      
+0x0231  NOP                      
+0x0232  NOP                      
+0x0233  NOP                      
+0x0234  NOP                      
+0x0235  NOP                      
+0x0236  NOP                      
+0x0237  NOP                      
+0x0238  NOP                      
+0x0239  NOP                      
+0x023a  NOP                      
+0x023b  NOP                      
+0x023c  NOP                      
+0x023d  NOP                      
+0x023e  NOP                      
+0x023f  NOP                      
+0x0240  NOP                      
+0x0241  NOP                      
+0x0242  NOP                      
+0x0243  NOP                      
+0x0244  NOP                      
+0x0245  NOP                      
+0x0246  NOP                      
+0x0247  NOP                      
+0x0248  NOP                      
+0x0249  NOP                      
+0x024a  NOP                      
+0x024b  NOP                      
+0x024c  NOP                      
+0x024d  NOP                      
+0x024e  NOP                      
+0x024f  NOP                      
+0x0250  NOP                      
+0x0251  NOP                      
+0x0252  NOP                      
+0x0253  NOP                      
+0x0254  NOP                      
+0x0255  NOP                      
+0x0256  NOP                      
+0x0257  NOP                      
+0x0258  NOP                      
+0x0259  NOP                      
+0x025a  NOP                      
+0x025b  NOP                      
+0x025c  NOP                      
+0x025d  NOP                      
+0x025e  NOP                      
+0x025f  NOP                      
+0x0260  NOP                      
+0x0261  NOP                      
+0x0262  NOP                      
+0x0263  NOP                      
+0x0264  NOP                      
+0x0265  NOP                      
+0x0266  NOP                      
+0x0267  NOP                      
+0x0268  NOP                      
+0x0269  NOP                      
+0x026a  NOP                      
+0x026b  NOP                      
+0x026c  NOP                      
+0x026d  NOP                      
+0x026e  NOP                      
+0x026f  NOP                      
+0x0270  NOP                      
+0x0271  NOP                      
+0x0272  NOP                      
+0x0273  NOP                      
+0x0274  NOP                      
+0x0275  NOP                      
+0x0276  NOP                      
+0x0277  NOP                      
+0x0278  NOP                      
+0x0279  NOP                      
+0x027a  NOP                      
+0x027b  NOP                      
+0x027c  NOP                      
+0x027d  NOP                      
+0x027e  NOP                      
+0x027f  NOP                      
+0x0280  NOP                      
+0x0281  NOP                      
+0x0282  NOP                      
+0x0283  NOP                      
+0x0284  NOP                      
+0x0285  NOP                      
+0x0286  NOP                      
+0x0287  NOP                      
+0x0288  NOP                      
+0x0289  NOP                      
+0x028a  NOP                      
+0x028b  NOP                      
+0x028c  NOP                      
+0x028d  NOP                      
+0x028e  NOP                      
+0x028f  NOP                      
+0x0290  NOP                      
+0x0291  NOP                      
+0x0292  NOP                      
+0x0293  NOP                      
+0x0294  NOP                      
+0x0295  NOP                      
+0x0296  NOP                      
+0x0297  NOP                      
+0x0298  NOP                      
+0x0299  NOP                      
+0x029a  NOP                      
+0x029b  NOP                      
+0x029c  NOP                      
+0x029d  NOP                      
+0x029e  NOP                      
+0x029f  NOP                      
+0x02a0  NOP                      
+0x02a1  NOP                      
+0x02a2  NOP                      
+0x02a3  NOP                      
+0x02a4  NOP                      
+0x02a5  NOP                      
+0x02a6  NOP                      
+0x02a7  NOP                      
+0x02a8  NOP                      
+0x02a9  NOP                      
+0x02aa  NOP                      
+0x02ab  NOP                      
+0x02ac  NOP                      
+0x02ad  NOP                      
+0x02ae  NOP                      
+0x02af  NOP                      
+0x02b0  NOP                      
+0x02b1  NOP                      
+0x02b2  NOP                      
+0x02b3  NOP                      
+0x02b4  NOP                      
+0x02b5  NOP                      
+0x02b6  NOP                      
+0x02b7  NOP                      
+0x02b8  NOP                      
+0x02b9  NOP                      
+0x02ba  NOP                      
+0x02bb  NOP                      
+0x02bc  NOP                      
+0x02bd  NOP                      
+0x02be  NOP                      
+0x02bf  NOP                      
+0x02c0  NOP                      
+0x02c1  NOP                      
+0x02c2  NOP                      
+0x02c3  NOP                      
+0x02c4  NOP                      
+0x02c5  NOP                      
+0x02c6  NOP                      
+0x02c7  NOP                      
+0x02c8  NOP                      
+0x02c9  NOP                      
+0x02ca  NOP                      
+0x02cb  NOP                      
+0x02cc  NOP                      
+0x02cd  NOP                      
+0x02ce  NOP                      
+0x02cf  NOP                      
+0x02d0  NOP                      
+0x02d1  NOP                      
+0x02d2  NOP                      
+0x02d3  NOP                      
+0x02d4  NOP                      
+0x02d5  NOP                      
+0x02d6  NOP                      
+0x02d7  NOP                      
+0x02d8  NOP                      
+0x02d9  NOP                      
+0x02da  NOP                      
+0x02db  NOP                      
+0x02dc  NOP                      
+0x02dd  NOP                      
+0x02de  NOP                      
+0x02df  NOP                      
+0x02e0  NOP                      
+0x02e1  NOP                      
+0x02e2  NOP                      
+0x02e3  NOP                      
+0x02e4  NOP                      
+0x02e5  NOP                      
+0x02e6  NOP                      
+0x02e7  NOP                      
+0x02e8  NOP                      
+0x02e9  NOP                      
+0x02ea  NOP                      
+0x02eb  NOP                      
+0x02ec  NOP                      
+0x02ed  NOP                      
+0x02ee  NOP                      
+0x02ef  NOP                      
+0x02f0  NOP                      
+0x02f1  NOP                      
+0x02f2  NOP                      
+0x02f3  NOP                      
+0x02f4  NOP                      
+0x02f5  NOP                      
+0x02f6  NOP                      
+0x02f7  NOP                      
+0x02f8  NOP                      
+0x02f9  NOP                      
+0x02fa  NOP                      
+0x02fb  NOP                      
+0x02fc  NOP                      
+0x02fd  NOP                      
+0x02fe  NOP                      
+0x02ff  NOP                      
+0x0300  NOP                      
+0x0301  NOP                      
+0x0302  NOP                      
+0x0303  NOP                      
+0x0304  NOP                      
+0x0305  NOP                      
+0x0306  NOP                      
+0x0307  NOP                      
+0x0308  NOP                      
+0x0309  NOP                      
+0x030a  NOP                      
+0x030b  NOP                      
+0x030c  NOP                      
+0x030d  NOP                      
+0x030e  NOP                      
+0x030f  NOP                      
+0x0310  NOP                      
+0x0311  NOP                      
+0x0312  NOP                      
+0x0313  NOP                      
+0x0314  NOP                      
+0x0315  NOP                      
+0x0316  NOP                      
+0x0317  NOP                      
+0x0318  NOP                      
+0x0319  NOP                      
+0x031a  NOP                      
+0x031b  NOP                      
+0x031c  NOP                      
+0x031d  NOP                      
+0x031e  NOP                      
+0x031f  NOP                      
+0x0320  NOP                      
+0x0321  NOP                      
+0x0322  NOP                      
+0x0323  NOP                      
+0x0324  NOP                      
+0x0325  NOP                      
+0x0326  NOP                      
+0x0327  NOP                      
+0x0328  NOP                      
+0x0329  NOP                      
+0x032a  NOP                      
+0x032b  NOP                      
+0x032c  NOP                      
+0x032d  NOP                      
+0x032e  NOP                      
+0x032f  NOP                      
+0x0330  NOP                      
+0x0331  NOP                      
+0x0332  NOP                      
+0x0333  NOP                      
+0x0334  NOP                      
+0x0335  NOP                      
+0x0336  NOP                      
+0x0337  NOP                      
+0x0338  NOP                      
+0x0339  NOP                      
+0x033a  NOP                      
+0x033b  NOP                      
+0x033c  NOP                      
+0x033d  NOP                      
+0x033e  NOP                      
+0x033f  NOP                      
+0x0340  NOP                      
+0x0341  NOP                      
+0x0342  NOP                      
+0x0343  NOP                      
+0x0344  NOP                      
+0x0345  NOP                      
+0x0346  NOP                      
+0x0347  NOP                      
+0x0348  NOP                      
+0x0349  NOP                      
+0x034a  NOP                      
+0x034b  NOP                      
+0x034c  NOP                      
+0x034d  NOP                      
+0x034e  NOP                      
+0x034f  NOP                      
+0x0350  NOP                      
+0x0351  NOP                      
+0x0352  NOP                      
+0x0353  NOP                      
+0x0354  NOP                      
+0x0355  NOP                      
+0x0356  NOP                      
+0x0357  NOP                      
+0x0358  NOP                      
+0x0359  NOP                      
+0x035a  NOP                      
+0x035b  NOP                      
+0x035c  NOP                      
+0x035d  NOP                      
+0x035e  NOP                      
+0x035f  NOP                      
+0x0360  NOP                      
+0x0361  NOP                      
+0x0362  NOP                      
+0x0363  NOP                      
+0x0364  NOP                      
+0x0365  NOP                      
+0x0366  NOP                      
+0x0367  NOP                      
+0x0368  NOP                      
+0x0369  NOP                      
+0x036a  NOP                      
+0x036b  NOP                      
+0x036c  NOP                      
+0x036d  NOP                      
+0x036e  NOP                      
+0x036f  NOP                      
+0x0370  NOP                      
+0x0371  NOP                      
+0x0372  NOP                      
+0x0373  NOP                      
+0x0374  NOP                      
+0x0375  NOP                      
+0x0376  NOP                      
+0x0377  NOP                      
+0x0378  NOP                      
+0x0379  NOP                      
+0x037a  NOP                      
+0x037b  NOP                      
+0x037c  NOP                      
+0x037d  NOP                      
+0x037e  NOP                      
+0x037f  NOP                      
+0x0380  NOP                      
+0x0381  NOP                      
+0x0382  NOP                      
+0x0383  NOP                      
+0x0384  NOP                      
+0x0385  NOP                      
+0x0386  NOP                      
+0x0387  NOP                      
+0x0388  NOP                      
+0x0389  NOP                      
+0x038a  NOP                      
+0x038b  NOP                      
+0x038c  NOP                      
+0x038d  NOP                      
+0x038e  NOP                      
+0x038f  NOP                      
+0x0390  NOP                      
+0x0391  NOP                      
+0x0392  NOP                      
+0x0393  NOP                      
+0x0394  NOP                      
+0x0395  NOP                      
+0x0396  NOP                      
+0x0397  NOP                      
+0x0398  NOP                      
+0x0399  NOP                      
+0x039a  NOP                      
+0x039b  NOP                      
+0x039c  NOP                      
+0x039d  NOP                      
+0x039e  NOP                      
+0x039f  NOP                      
+0x03a0  NOP                      
+0x03a1  NOP                      
+0x03a2  NOP                      
+0x03a3  NOP                      
+0x03a4  NOP                      
+0x03a5  NOP                      
+0x03a6  NOP                      
+0x03a7  NOP                      
+0x03a8  NOP                      
+0x03a9  NOP                      
+0x03aa  NOP                      
+0x03ab  NOP                      
+0x03ac  NOP                      
+0x03ad  NOP                      
+0x03ae  NOP                      
+0x03af  NOP                      
+0x03b0  NOP                      
+0x03b1  NOP                      
+0x03b2  NOP                      
+0x03b3  NOP                      
+0x03b4  NOP                      
+0x03b5  NOP                      
+0x03b6  NOP                      
+0x03b7  NOP                      
+0x03b8  NOP                      
+0x03b9  NOP                      
+0x03ba  NOP                      
+0x03bb  NOP                      
+0x03bc  NOP                      
+0x03bd  NOP                      
+0x03be  NOP                      
+0x03bf  NOP                      
+0x03c0  NOP                      
+0x03c1  NOP                      
+0x03c2  NOP                      
+0x03c3  NOP                      
+0x03c4  NOP                      
+0x03c5  NOP                      
+0x03c6  NOP                      
+0x03c7  NOP                      
+0x03c8  NOP                      
+0x03c9  NOP                      
+0x03ca  NOP                      
+0x03cb  NOP                      
+0x03cc  NOP                      
+0x03cd  NOP                      
+0x03ce  NOP                      
+0x03cf  NOP                      
+0x03d0  NOP                      
+0x03d1  NOP                      
+0x03d2  NOP                      
+0x03d3  NOP                      
+0x03d4  NOP                      
+0x03d5  NOP                      
+0x03d6  NOP                      
+0x03d7  NOP                      
+0x03d8  NOP                      
+0x03d9  NOP                      
+0x03da  NOP                      
+0x03db  NOP                      
+0x03dc  NOP                      
+0x03dd  NOP                      
+0x03de  NOP                      
+0x03df  NOP                      
+0x03e0  NOP                      
+0x03e1  NOP                      
+0x03e2  NOP                      
+0x03e3  NOP                      
+0x03e4  NOP                      
+0x03e5  NOP                      
+0x03e6  NOP                      
+0x03e7  NOP                      
+0x03e8  NOP                      
+0x03e9  NOP                      
+0x03ea  NOP                      
+0x03eb  NOP                      
+0x03ec  NOP                      
+0x03ed  NOP                      
+0x03ee  NOP                      
+0x03ef  NOP                      
+0x03f0  NOP                      
+0x03f1  NOP                      
+0x03f2  NOP                      
+0x03f3  NOP                      
+0x03f4  NOP                      
+0x03f5  NOP                      
+0x03f6  NOP                      
+0x03f7  NOP                      
+0x03f8  NOP                      
+0x03f9  NOP                      
+0x03fa  NOP                      
+0x03fb  NOP                      
+0x03fc  NOP                      
+0x03fd  NOP                      
+0x03fe  NOP                      
+0x03ff  NOP                      
+0x0400  NOP                      
+0x0401  CALL 0x1474              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0404  NOP                      
+0x0405  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0406  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0407  LDAX                     ;; A <- (DE)      
+0x0408  OUT 0x04                 ;; special        
+0x040a  IN 0x03                  ;; special        
+0x040c  ORA                      ;; A <- A | (HL)  
+0x040d  MOV                      ;; (HL) <- A      
+0x040e  INX                      ;; HL <- HL + 1   
+0x040f  INX                      ;; DE <- DE + 1   
+0x0410  XRA                      ;; A <- A ^ A     
+0x0411  OUT 0x04                 ;; special        
+0x0413  IN 0x03                  ;; special        
+0x0415  ORA                      ;; A <- A | (HL)  
+0x0416  MOV                      ;; (HL) <- A      
+0x0417  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0418  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x041b  DAD                      ;; HL = HL + BC   
+0x041c  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x041d  DCR                      ;; B <- B-1       
+0x041e  JNZ 0x1405               ;; if NZ, PC <- adr
+0x0421  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0422  NOP                      
+0x0423  NOP                      
+0x0424  CALL 0x1474              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0427  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0428  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0429  XRA                      ;; A <- A ^ A     
+0x042a  MOV                      ;; (HL) <- A      
+0x042b  INX                      ;; HL <- HL + 1   
+0x042c  MOV                      ;; (HL) <- A      
+0x042d  INX                      ;; HL <- HL + 1   
+0x042e  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x042f  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x0432  DAD                      ;; HL = HL + BC   
+0x0433  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0434  DCR                      ;; B <- B-1       
+0x0435  JNZ 0x1427               ;; if NZ, PC <- adr
+0x0438  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0439  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x043a  LDAX                     ;; A <- (DE)      
+0x043b  MOV                      ;; (HL) <- A      
+0x043c  INX                      ;; DE <- DE + 1   
+0x043d  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x0440  DAD                      ;; HL = HL + BC   
+0x0441  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0442  DCR                      ;; B <- B-1       
+0x0443  JNZ 0x1439               ;; if NZ, PC <- adr
+0x0446  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0447  NOP                      
+0x0448  NOP                      
+0x0449  NOP                      
+0x044a  NOP                      
+0x044b  NOP                      
+0x044c  NOP                      
+0x044d  NOP                      
+0x044e  NOP                      
+0x044f  NOP                      
+0x0450  NOP                      
+0x0451  NOP                      
+0x0452  CALL 0x1474              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0455  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0456  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0457  LDAX                     ;; A <- (DE)      
+0x0458  OUT 0x04                 ;; special        
+0x045a  IN 0x03                  ;; special        
+0x045c  CMA                      ;; A <- !A        
+0x045d  ANA                      ;; A <- A & (HL)  
+0x045e  MOV                      ;; (HL) <- A      
+0x045f  INX                      ;; HL <- HL + 1   
+0x0460  INX                      ;; DE <- DE + 1   
+0x0461  XRA                      ;; A <- A ^ A     
+0x0462  OUT 0x04                 ;; special        
+0x0464  IN 0x03                  ;; special        
+0x0466  CMA                      ;; A <- !A        
+0x0467  ANA                      ;; A <- A & (HL)  
+0x0468  MOV                      ;; (HL) <- A      
+0x0469  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x046a  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x046d  DAD                      ;; HL = HL + BC   
+0x046e  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x046f  DCR                      ;; B <- B-1       
+0x0470  JNZ 0x1455               ;; if NZ, PC <- adr
+0x0473  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0474  MOV                      ;; A <- L         
+0x0475  ANI 0x07                 ;; A <- A & data  
+0x0477  OUT 0x02                 ;; special        
+0x0479  JMP 0x1a47               ;; PC <= adr      
+0x047c  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x047d  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x047e  MOV                      ;; A <- (HL)      
+0x047f  STAX                     ;; (DE) <- A      
+0x0480  INX                      ;; DE <- DE + 1   
+0x0481  INX                      ;; HL <- HL + 1   
+0x0482  DCR                      ;; C <-C-1        
+0x0483  JNZ 0x147e               ;; if NZ, PC <- adr
+0x0486  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0487  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x048a  DAD                      ;; HL = HL + BC   
+0x048b  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x048c  DCR                      ;; B <- B-1       
+0x048d  JNZ 0x147c               ;; if NZ, PC <- adr
+0x0490  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0491  CALL 0x1474              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0494  XRA                      ;; A <- A ^ A     
+0x0495  STA 0x2061               ;; (adr) <- A     
+0x0498  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0499  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x049a  LDAX                     ;; A <- (DE)      
+0x049b  OUT 0x04                 ;; special        
+0x049d  IN 0x03                  ;; special        
+0x049f  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x04a0  ANA                      ;; A <- A & (HL)  
+0x04a1  JZ 0x14a9                ;; if Z, PC <- adr
+0x04a4  MVI 0x01                 ;; A <- byte 2    
+0x04a6  STA 0x2061               ;; (adr) <- A     
+0x04a9  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x04aa  ORA                      ;; A <- A | (HL)  
+0x04ab  MOV                      ;; (HL) <- A      
+0x04ac  INX                      ;; HL <- HL + 1   
+0x04ad  INX                      ;; DE <- DE + 1   
+0x04ae  XRA                      ;; A <- A ^ A     
+0x04af  OUT 0x04                 ;; special        
+0x04b1  IN 0x03                  ;; special        
+0x04b3  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x04b4  ANA                      ;; A <- A & (HL)  
+0x04b5  JZ 0x14bd                ;; if Z, PC <- adr
+0x04b8  MVI 0x01                 ;; A <- byte 2    
+0x04ba  STA 0x2061               ;; (adr) <- A     
+0x04bd  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x04be  ORA                      ;; A <- A | (HL)  
+0x04bf  MOV                      ;; (HL) <- A      
+0x04c0  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x04c1  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x04c4  DAD                      ;; HL = HL + BC   
+0x04c5  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x04c6  DCR                      ;; B <- B-1       
+0x04c7  JNZ 0x1498               ;; if NZ, PC <- adr
+0x04ca  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x04cb  XRA                      ;; A <- A ^ A     
+0x04cc  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x04cd  MOV                      ;; (HL) <- A      
+0x04ce  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x04d1  DAD                      ;; HL = HL + BC   
+0x04d2  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x04d3  DCR                      ;; B <- B-1       
+0x04d4  JNZ 0x14cc               ;; if NZ, PC <- adr
+0x04d7  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x04d8  LDA 0x2025               ;; A <- (adr)     
+0x04db  CPI 0x05                 ;; A - data       
+0x04dd  RZ                       ;; if Z, RET      
+0x04de  CPI 0x02                 ;; A - data       
+0x04e0  RNZ                      ;; if NZ, RET     
+0x04e1  LDA 0x2029               ;; A <- (adr)     
+0x04e4  CPI 0xd8                 ;; A - data       
+0x04e6  MOV                      ;; B <- A         
+0x04e7  JNC 0x1530               ;; if NCY, PC<-adr
+0x04ea  LDA 0x2002               ;; A <- (adr)     
+0x04ed  ANA                      ;; A <- A & A     
+0x04ee  RZ                       ;; if Z, RET      
+0x04ef  MOV                      ;; A <- B         
+0x04f0  CPI 0xce                 ;; A - data       
+0x04f2  JNC 0x1579               ;; if NCY, PC<-adr
+0x04f5  ADI 0x06                 ;; A <- A + byte  
+0x04f7  MOV                      ;; B <- A         
+0x04f8  LDA 0x2009               ;; A <- (adr)     
+0x04fb  CPI 0x90                 ;; A - data       
+0x04fd  JNC 0x1504               ;; if NCY, PC<-adr
+0x0500  CMP                      ;; A - B          
+0x0501  JNC 0x1530               ;; if NCY, PC<-adr
+0x0504  MOV                      ;; L <- B         
+0x0505  CALL 0x1562              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0508  LDA 0x202a               ;; A <- (adr)     
+0x050b  MOV                      ;; H <- A         
+0x050c  CALL 0x156f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x050f  SHLD 0x2064              ;; (adr) <-L; (adr+1)<-H
+0x0512  MVI 0x05                 ;; A <- byte 2    
+0x0514  STA 0x2025               ;; (adr) <- A     
+0x0517  CALL 0x1581              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x051a  MOV                      ;; A <- (HL)      
+0x051b  ANA                      ;; A <- A & A     
+0x051c  JZ 0x1530                ;; if Z, PC <- adr
+0x051f  MVI 0x00                 ;; (HL) <- byte 2 
+0x0521  CALL 0x0a5f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0524  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0527  CALL 0x15d3              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x052a  MVI 0x10                 ;; A <- byte 2    
+0x052c  STA 0x2003               ;; (adr) <- A     
+0x052f  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0530  MVI 0x03                 ;; A <- byte 2    
+0x0532  STA 0x2025               ;; (adr) <- A     
+0x0535  JMP 0x154a               ;; PC <= adr      
+0x0538  LXI 0x2003               ;; H <- byte 3, L <- byte 2
+0x053b  DCR                      ;; (HL) <- (HL)-1 
+0x053c  RNZ                      ;; if NZ, RET     
+0x053d  LHLD 0x2064              ;; L <- (adr); H<-(adr+1)
+0x0540  MVI 0x10                 ;; B <- byte 2    
+0x0542  CALL 0x1424              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0545  MVI 0x04                 ;; A <- byte 2    
+0x0547  STA 0x2025               ;; (adr) <- A     
+0x054a  XRA                      ;; A <- A ^ A     
+0x054b  STA 0x2002               ;; (adr) <- A     
+0x054e  MVI 0xf7                 ;; B <- byte 2    
+0x0550  JMP 0x19dc               ;; PC <= adr      
+0x0553  NOP                      
+0x0554  MVI 0x00                 ;; C <- byte 2    
+0x0556  CMP                      ;; A - H          
+0x0557  CNC 0x1590               ;; if NCY, CALL adr
+0x055a  CMP                      ;; A - H          
+0x055b  RNC                      ;; if NCY, RET    
+0x055c  ADI 0x10                 ;; A <- A + byte  
+0x055e  INR                      ;; C <- C+1       
+0x055f  JMP 0x155a               ;; PC <= adr      
+0x0562  LDA 0x2009               ;; A <- (adr)     
+0x0565  MOV                      ;; H <- L         
+0x0566  CALL 0x1554              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0569  MOV                      ;; B <- C         
+0x056a  DCR                      ;; B <- B-1       
+0x056b  SBI 0x10                 ;; A <- A - data - CY
+0x056d  MOV                      ;; L <- A         
+0x056e  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x056f  LDA 0x200a               ;; A <- (adr)     
+0x0572  CALL 0x1554              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0575  SBI 0x10                 ;; A <- A - data - CY
+0x0577  MOV                      ;; H <- A         
+0x0578  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0579  MVI 0x01                 ;; A <- byte 2    
+0x057b  STA 0x2085               ;; (adr) <- A     
+0x057e  JMP 0x1545               ;; PC <= adr      
+0x0581  MOV                      ;; A <- B         
+0x0582  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0583  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0584  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0585  ADD                      ;; A <- A + B     
+0x0586  ADD                      ;; A <- A + B     
+0x0587  ADD                      ;; A <- A + B     
+0x0588  ADD                      ;; A <- A + C     
+0x0589  DCR                      ;; A <- A-1       
+0x058a  MOV                      ;; L <- A         
+0x058b  LDA 0x2067               ;; A <- (adr)     
+0x058e  MOV                      ;; H <- A         
+0x058f  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0590  INR                      ;; C <- C+1       
+0x0591  ADI 0x10                 ;; A <- A + byte  
+0x0593  JM 0x1590                ;; if M, PC <- adr
+0x0596  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0597  LDA 0x200d               ;; A <- (adr)     
+0x059a  ANA                      ;; A <- A & A     
+0x059b  JNZ 0x15b7               ;; if NZ, PC <- adr
+0x059e  LXI 0x3ea4               ;; H <- byte 3, L <- byte 2
+0x05a1  CALL 0x15c5              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05a4  RNC                      ;; if NCY, RET    
+0x05a5  MVI 0xfe                 ;; B <- byte 2    
+0x05a7  MVI 0x01                 ;; A <- byte 2    
+0x05a9  STA 0x200d               ;; (adr) <- A     
+0x05ac  MOV                      ;; A <- B         
+0x05ad  STA 0x2008               ;; (adr) <- A     
+0x05b0  LDA 0x200e               ;; A <- (adr)     
+0x05b3  STA 0x2007               ;; (adr) <- A     
+0x05b6  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x05b7  LXI 0x2524               ;; H <- byte 3, L <- byte 2
+0x05ba  CALL 0x15c5              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05bd  RNC                      ;; if NCY, RET    
+0x05be  CALL 0x18f1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05c1  XRA                      ;; A <- A ^ A     
+0x05c2  JMP 0x15a9               ;; PC <= adr      
+0x05c5  MVI 0x17                 ;; B <- byte 2    
+0x05c7  MOV                      ;; A <- (HL)      
+0x05c8  ANA                      ;; A <- A & A     
+0x05c9  JNZ 0x166b               ;; if NZ, PC <- adr
+0x05cc  INX                      ;; HL <- HL + 1   
+0x05cd  DCR                      ;; B <- B-1       
+0x05ce  JNZ 0x15c7               ;; if NZ, PC <- adr
+0x05d1  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x05d2  NOP                      
+0x05d3  CALL 0x1474              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05d6  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x05d7  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x05d8  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x05d9  LDAX                     ;; A <- (DE)      
+0x05da  OUT 0x04                 ;; special        
+0x05dc  IN 0x03                  ;; special        
+0x05de  MOV                      ;; (HL) <- A      
+0x05df  INX                      ;; HL <- HL + 1   
+0x05e0  INX                      ;; DE <- DE + 1   
+0x05e1  XRA                      ;; A <- A ^ A     
+0x05e2  OUT 0x04                 ;; special        
+0x05e4  IN 0x03                  ;; special        
+0x05e6  MOV                      ;; (HL) <- A      
+0x05e7  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x05e8  LXI 0x0020               ;; B <- byte 3, C <- byte 2
+0x05eb  DAD                      ;; HL = HL + BC   
+0x05ec  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x05ed  DCR                      ;; B <- B-1       
+0x05ee  JNZ 0x15d7               ;; if NZ, PC <- adr
+0x05f1  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x05f2  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x05f3  CALL 0x1611              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05f6  LXI 0x3700               ;; B <- byte 3, C <- byte 2
+0x05f9  MOV                      ;; A <- (HL)      
+0x05fa  ANA                      ;; A <- A & A     
+0x05fb  JZ 0x15ff                ;; if Z, PC <- adr
+0x05fe  INR                      ;; C <- C+1       
+0x05ff  INX                      ;; HL <- HL + 1   
+0x0600  DCR                      ;; B <- B-1       
+0x0601  JNZ 0x15f9               ;; if NZ, PC <- adr
+0x0604  MOV                      ;; A <- C         
+0x0605  STA 0x2082               ;; (adr) <- A     
+0x0608  CPI 0x01                 ;; A - data       
+0x060a  RNZ                      ;; if NZ, RET     
+0x060b  LXI 0x206b               ;; H <- byte 3, L <- byte 2
+0x060e  MVI 0x01                 ;; (HL) <- byte 2 
+0x0610  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0611  MVI 0x00                 ;; L <- byte 2    
+0x0613  LDA 0x2067               ;; A <- (adr)     
+0x0616  MOV                      ;; H <- A         
+0x0617  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0618  LDA 0x2015               ;; A <- (adr)     
+0x061b  CPI 0xff                 ;; A - data       
+0x061d  RNZ                      ;; if NZ, RET     
+0x061e  LXI 0x2010               ;; H <- byte 3, L <- byte 2
+0x0621  MOV                      ;; A <- (HL)      
+0x0622  INX                      ;; HL <- HL + 1   
+0x0623  MOV                      ;; B <- (HL)      
+0x0624  ORA                      ;; A <- A | B     
+0x0625  RNZ                      ;; if NZ, RET     
+0x0626  LDA 0x2025               ;; A <- (adr)     
+0x0629  ANA                      ;; A <- A & A     
+0x062a  RNZ                      ;; if NZ, RET     
+0x062b  LDA 0x20ef               ;; A <- (adr)     
+0x062e  ANA                      ;; A <- A & A     
+0x062f  JZ 0x1652                ;; if Z, PC <- adr
+0x0632  LDA 0x202d               ;; A <- (adr)     
+0x0635  ANA                      ;; A <- A & A     
+0x0636  JNZ 0x1648               ;; if NZ, PC <- adr
+0x0639  CALL 0x17c0              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x063c  ANI 0x10                 ;; A <- A & data  
+0x063e  RZ                       ;; if Z, RET      
+0x063f  MVI 0x01                 ;; A <- byte 2    
+0x0641  STA 0x2025               ;; (adr) <- A     
+0x0644  STA 0x202d               ;; (adr) <- A     
+0x0647  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0648  CALL 0x17c0              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x064b  ANI 0x10                 ;; A <- A & data  
+0x064d  RNZ                      ;; if NZ, RET     
+0x064e  STA 0x202d               ;; (adr) <- A     
+0x0651  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0652  LXI 0x2025               ;; H <- byte 3, L <- byte 2
+0x0655  MVI 0x01                 ;; (HL) <- byte 2 
+0x0657  LHLD 0x20ed              ;; L <- (adr); H<-(adr+1)
+0x065a  INX                      ;; HL <- HL + 1   
+0x065b  MOV                      ;; A <- L         
+0x065c  CPI 0x7e                 ;; A - data       
+0x065e  JC 0x1663                ;; if CY, PC<-adr 
+0x0661  MVI 0x74                 ;; L <- byte 2    
+0x0663  SHLD 0x20ed              ;; (adr) <-L; (adr+1)<-H
+0x0666  MOV                      ;; A <- (HL)      
+0x0667  STA 0x201d               ;; (adr) <- A     
+0x066a  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x066b  STC                      ;; CY = 1         
+0x066c  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x066d  XRA                      ;; A <- A ^ A     
+0x066e  CALL 0x1a8b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0671  CALL 0x1910              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0674  MVI 0x00                 ;; (HL) <- byte 2 
+0x0676  CALL 0x09ca              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0679  INX                      ;; HL <- HL + 1   
+0x067a  LXI 0x20f5               ;; D <- byte 3, E <- byte 2
+0x067d  LDAX                     ;; A <- (DE)      
+0x067e  CMP                      ;; A - (HL)       
+0x067f  DCX                      ;; DE = DE-1      
+0x0680  DCX                      ;; HL = HL-1      
+0x0681  LDAX                     ;; A <- (DE)      
+0x0682  JZ 0x168b                ;; if Z, PC <- adr
+0x0685  JNC 0x1698               ;; if NCY, PC<-adr
+0x0688  JMP 0x168f               ;; PC <= adr      
+0x068b  CMP                      ;; A - (HL)       
+0x068c  JNC 0x1698               ;; if NCY, PC<-adr
+0x068f  MOV                      ;; A <- (HL)      
+0x0690  STAX                     ;; (DE) <- A      
+0x0691  INX                      ;; DE <- DE + 1   
+0x0692  INX                      ;; HL <- HL + 1   
+0x0693  MOV                      ;; A <- (HL)      
+0x0694  STAX                     ;; (DE) <- A      
+0x0695  CALL 0x1950              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0698  LDA 0x20ce               ;; A <- (adr)     
+0x069b  ANA                      ;; A <- A & A     
+0x069c  JZ 0x16c9                ;; if Z, PC <- adr
+0x069f  LXI 0x2803               ;; H <- byte 3, L <- byte 2
+0x06a2  LXI 0x1aa6               ;; D <- byte 3, E <- byte 2
+0x06a5  MVI 0x14                 ;; C <- byte 2    
+0x06a7  CALL 0x0a93              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06aa  DCR                      ;; H <- H-1       
+0x06ab  DCR                      ;; H <- H-1       
+0x06ac  MVI 0x1b                 ;; B <- byte 2    
+0x06ae  LDA 0x2067               ;; A <- (adr)     
+0x06b1  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x06b2  JC 0x16b7                ;; if CY, PC<-adr 
+0x06b5  MVI 0x1c                 ;; B <- byte 2    
+0x06b7  MOV                      ;; A <- B         
+0x06b8  CALL 0x08ff              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06bb  CALL 0x0ab1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06be  CALL 0x18e7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06c1  MOV                      ;; A <- (HL)      
+0x06c2  ANA                      ;; A <- A & A     
+0x06c3  JZ 0x16c9                ;; if Z, PC <- adr
+0x06c6  JMP 0x02ed               ;; PC <= adr      
+0x06c9  LXI 0x2d18               ;; H <- byte 3, L <- byte 2
+0x06cc  LXI 0x1aa6               ;; D <- byte 3, E <- byte 2
+0x06cf  MVI 0x0a                 ;; C <- byte 2    
+0x06d1  CALL 0x0a93              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06d4  CALL 0x0ab6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06d7  CALL 0x09d6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06da  XRA                      ;; A <- A ^ A     
+0x06db  STA 0x20ef               ;; (adr) <- A     
+0x06de  OUT 0x05                 ;; special        
+0x06e0  CALL 0x19d1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06e3  JMP 0x0b89               ;; PC <= adr      
+0x06e6  LXI 0x2400               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x06e9  EI                       ;; special        
+0x06ea  XRA                      ;; A <- A ^ A     
+0x06eb  STA 0x2015               ;; (adr) <- A     
+0x06ee  CALL 0x14d8              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06f1  MVI 0x04                 ;; B <- byte 2    
+0x06f3  CALL 0x18fa              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06f6  CALL 0x0a59              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06f9  JNZ 0x16ee               ;; if NZ, PC <- adr
+0x06fc  CALL 0x19d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06ff  LXI 0x2701               ;; H <- byte 3, L <- byte 2
+0x0702  CALL 0x19fa              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0705  XRA                      ;; A <- A ^ A     
+0x0706  CALL 0x1a8b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0709  MVI 0xfb                 ;; B <- byte 2    
+0x070b  JMP 0x196b               ;; PC <= adr      
+0x070e  CALL 0x09ca              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0711  INX                      ;; HL <- HL + 1   
+0x0712  MOV                      ;; A <- (HL)      
+0x0713  LXI 0x1cb8               ;; D <- byte 3, E <- byte 2
+0x0716  LXI 0x1aa1               ;; H <- byte 3, L <- byte 2
+0x0719  MVI 0x04                 ;; C <- byte 2    
+0x071b  MOV                      ;; B <- A         
+0x071c  LDAX                     ;; A <- (DE)      
+0x071d  CMP                      ;; A - B          
+0x071e  JNC 0x1727               ;; if NCY, PC<-adr
+0x0721  INX                      ;; HL <- HL + 1   
+0x0722  INX                      ;; DE <- DE + 1   
+0x0723  DCR                      ;; C <-C-1        
+0x0724  JNZ 0x171c               ;; if NZ, PC <- adr
+0x0727  MOV                      ;; A <- (HL)      
+0x0728  STA 0x20cf               ;; (adr) <- A     
+0x072b  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x072c  LDA 0x2025               ;; A <- (adr)     
+0x072f  CPI 0x00                 ;; A - data       
+0x0731  JNZ 0x1739               ;; if NZ, PC <- adr
+0x0734  MVI 0xfd                 ;; B <- byte 2    
+0x0736  JMP 0x19dc               ;; PC <= adr      
+0x0739  MVI 0x02                 ;; B <- byte 2    
+0x073b  JMP 0x18fa               ;; PC <= adr      
+0x073e  NOP                      
+0x073f  NOP                      
+0x0740  LXI 0x209b               ;; H <- byte 3, L <- byte 2
+0x0743  DCR                      ;; (HL) <- (HL)-1 
+0x0744  CZ 0x176d                ;; if Z, CALL adr 
+0x0747  LDA 0x2068               ;; A <- (adr)     
+0x074a  ANA                      ;; A <- A & A     
+0x074b  JZ 0x176d                ;; if Z, PC <- adr
+0x074e  LXI 0x2096               ;; H <- byte 3, L <- byte 2
+0x0751  DCR                      ;; (HL) <- (HL)-1 
+0x0752  RNZ                      ;; if NZ, RET     
+0x0753  LXI 0x2098               ;; H <- byte 3, L <- byte 2
+0x0756  MOV                      ;; A <- (HL)      
+0x0757  OUT 0x05                 ;; special        
+0x0759  LDA 0x2082               ;; A <- (adr)     
+0x075c  ANA                      ;; A <- A & A     
+0x075d  JZ 0x176d                ;; if Z, PC <- adr
+0x0760  DCX                      ;; HL = HL-1      
+0x0761  MOV                      ;; A <- (HL)      
+0x0762  DCX                      ;; HL = HL-1      
+0x0763  MOV                      ;; (HL) <- A      
+0x0764  DCX                      ;; HL = HL-1      
+0x0765  MVI 0x01                 ;; (HL) <- byte 2 
+0x0767  MVI 0x04                 ;; A <- byte 2    
+0x0769  STA 0x209b               ;; (adr) <- A     
+0x076c  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x076d  LDA 0x2098               ;; A <- (adr)     
+0x0770  ANI 0x30                 ;; A <- A & data  
+0x0772  OUT 0x05                 ;; special        
+0x0774  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0775  LDA 0x2095               ;; A <- (adr)     
+0x0778  ANA                      ;; A <- A & A     
+0x0779  JZ 0x17aa                ;; if Z, PC <- adr
+0x077c  LXI 0x1a11               ;; H <- byte 3, L <- byte 2
+0x077f  LXI 0x1a21               ;; D <- byte 3, E <- byte 2
+0x0782  LDA 0x2082               ;; A <- (adr)     
+0x0785  CMP                      ;; A - (HL)       
+0x0786  JNC 0x178e               ;; if NCY, PC<-adr
+0x0789  INX                      ;; HL <- HL + 1   
+0x078a  INX                      ;; DE <- DE + 1   
+0x078b  JMP 0x1785               ;; PC <= adr      
+0x078e  LDAX                     ;; A <- (DE)      
+0x078f  STA 0x2097               ;; (adr) <- A     
+0x0792  LXI 0x2098               ;; H <- byte 3, L <- byte 2
+0x0795  MOV                      ;; A <- (HL)      
+0x0796  ANI 0x30                 ;; A <- A & data  
+0x0798  MOV                      ;; B <- A         
+0x0799  MOV                      ;; A <- (HL)      
+0x079a  ANI 0x0f                 ;; A <- A & data  
+0x079c  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x079d  CPI 0x10                 ;; A - data       
+0x079f  JNZ 0x17a4               ;; if NZ, PC <- adr
+0x07a2  MVI 0x01                 ;; A <- byte 2    
+0x07a4  ORA                      ;; A <- A | B     
+0x07a5  MOV                      ;; (HL) <- A      
+0x07a6  XRA                      ;; A <- A ^ A     
+0x07a7  STA 0x2095               ;; (adr) <- A     
+0x07aa  LXI 0x2099               ;; H <- byte 3, L <- byte 2
+0x07ad  DCR                      ;; (HL) <- (HL)-1 
+0x07ae  RNZ                      ;; if NZ, RET     
+0x07af  MVI 0xef                 ;; B <- byte 2    
+0x07b1  JMP 0x19dc               ;; PC <= adr      
+0x07b4  MVI 0xef                 ;; B <- byte 2    
+0x07b6  LXI 0x2098               ;; H <- byte 3, L <- byte 2
+0x07b9  MOV                      ;; A <- (HL)      
+0x07ba  ANA                      ;; A <- A & B     
+0x07bb  MOV                      ;; (HL) <- A      
+0x07bc  OUT 0x05                 ;; special        
+0x07be  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x07bf  NOP                      
+0x07c0  LDA 0x2067               ;; A <- (adr)     
+0x07c3  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x07c4  JNC 0x17ca               ;; if NCY, PC<-adr
+0x07c7  IN 0x01                  ;; special        
+0x07c9  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x07ca  IN 0x02                  ;; special        
+0x07cc  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x07cd  IN 0x02                  ;; special        
+0x07cf  ANI 0x04                 ;; A <- A & data  
+0x07d1  RZ                       ;; if Z, RET      
+0x07d2  LDA 0x209a               ;; A <- (adr)     
+0x07d5  ANA                      ;; A <- A & A     
+0x07d6  RNZ                      ;; if NZ, RET     
+0x07d7  LXI 0x2400               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x07da  MVI 0x04                 ;; B <- byte 2    
+0x07dc  CALL 0x09d6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07df  DCR                      ;; B <- B-1       
+0x07e0  JNZ 0x17dc               ;; if NZ, PC <- adr
+0x07e3  MVI 0x01                 ;; A <- byte 2    
+0x07e5  STA 0x209a               ;; (adr) <- A     
+0x07e8  CALL 0x19d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07eb  EI                       ;; special        
+0x07ec  LXI 0x1cbc               ;; D <- byte 3, E <- byte 2
+0x07ef  LXI 0x3016               ;; H <- byte 3, L <- byte 2
+0x07f2  MVI 0x04                 ;; C <- byte 2    
+0x07f4  CALL 0x0a93              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07f7  CALL 0x0ab1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07fa  XRA                      ;; A <- A ^ A     
+0x07fb  STA 0x209a               ;; (adr) <- A     
+0x07fe  STA 0x3993               ;; (adr) <- A     

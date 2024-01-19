@@ -1,0 +1,1024 @@
+File size: 2048
+0x0000  NOP                      
+0x0001  NOP                      
+0x0002  NOP                      
+0x0003  JMP 0x18d4               ;; PC <= adr      
+0x0006  NOP                      
+0x0007  NOP                      
+0x0008  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x0009  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x000a  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x000b  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x000c  JMP 0x008c               ;; PC <= adr      
+0x000f  NOP                      
+0x0010  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x0011  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0012  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x0013  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0014  MVI 0x80                 ;; A <- byte 2    
+0x0016  STA 0x2072               ;; (adr) <- A     
+0x0019  LXI 0x20c0               ;; H <- byte 3, L <- byte 2
+0x001c  DCR                      ;; (HL) <- (HL)-1 
+0x001d  CALL 0x17cd              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0020  IN 0x01                  ;; special        
+0x0022  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0023  JC 0x0067                ;; if CY, PC<-adr 
+0x0026  LDA 0x20ea               ;; A <- (adr)     
+0x0029  ANA                      ;; A <- A & A     
+0x002a  JZ 0x0042                ;; if Z, PC <- adr
+0x002d  LDA 0x20eb               ;; A <- (adr)     
+0x0030  CPI 0x99                 ;; A - data       
+0x0032  JZ 0x003e                ;; if Z, PC <- adr
+0x0035  ADI 0x01                 ;; A <- A + byte  
+0x0037  DAA                      ;; special        
+0x0038  STA 0x20eb               ;; (adr) <- A     
+0x003b  CALL 0x1947              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x003e  XRA                      ;; A <- A ^ A     
+0x003f  STA 0x20ea               ;; (adr) <- A     
+0x0042  LDA 0x20e9               ;; A <- (adr)     
+0x0045  ANA                      ;; A <- A & A     
+0x0046  JZ 0x0082                ;; if Z, PC <- adr
+0x0049  LDA 0x20ef               ;; A <- (adr)     
+0x004c  ANA                      ;; A <- A & A     
+0x004d  JNZ 0x006f               ;; if NZ, PC <- adr
+0x0050  LDA 0x20eb               ;; A <- (adr)     
+0x0053  ANA                      ;; A <- A & A     
+0x0054  JNZ 0x005d               ;; if NZ, PC <- adr
+0x0057  CALL 0x0abf              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x005a  JMP 0x0082               ;; PC <= adr      
+0x005d  LDA 0x2093               ;; A <- (adr)     
+0x0060  ANA                      ;; A <- A & A     
+0x0061  JNZ 0x0082               ;; if NZ, PC <- adr
+0x0064  JMP 0x0765               ;; PC <= adr      
+0x0067  MVI 0x01                 ;; A <- byte 2    
+0x0069  STA 0x20ea               ;; (adr) <- A     
+0x006c  JMP 0x003f               ;; PC <= adr      
+0x006f  CALL 0x1740              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0072  LDA 0x2032               ;; A <- (adr)     
+0x0075  STA 0x2080               ;; (adr) <- A     
+0x0078  CALL 0x0100              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x007b  CALL 0x0248              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x007e  CALL 0x0913              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0081  NOP                      
+0x0082  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0083  POP                      ;; E <- (sp); D <- (sp+1); sp <- sp+2
+0x0084  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0085  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x0086  EI                       ;; special        
+0x0087  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0088  NOP                      
+0x0089  NOP                      
+0x008a  NOP                      
+0x008b  NOP                      
+0x008c  XRA                      ;; A <- A ^ A     
+0x008d  STA 0x2072               ;; (adr) <- A     
+0x0090  LDA 0x20e9               ;; A <- (adr)     
+0x0093  ANA                      ;; A <- A & A     
+0x0094  JZ 0x0082                ;; if Z, PC <- adr
+0x0097  LDA 0x20ef               ;; A <- (adr)     
+0x009a  ANA                      ;; A <- A & A     
+0x009b  JNZ 0x00a5               ;; if NZ, PC <- adr
+0x009e  LDA 0x20c1               ;; A <- (adr)     
+0x00a1  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x00a2  JNC 0x0082               ;; if NCY, PC<-adr
+0x00a5  LXI 0x2020               ;; H <- byte 3, L <- byte 2
+0x00a8  CALL 0x024b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00ab  CALL 0x0141              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00ae  JMP 0x0082               ;; PC <= adr      
+0x00b1  CALL 0x0886              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x00b4  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x00b5  MOV                      ;; A <- (HL)      
+0x00b6  INX                      ;; HL <- HL + 1   
+0x00b7  MOV                      ;; H <- (HL)      
+0x00b8  MOV                      ;; L <- A         
+0x00b9  SHLD 0x2009              ;; (adr) <-L; (adr+1)<-H
+0x00bc  SHLD 0x200b              ;; (adr) <-L; (adr+1)<-H
+0x00bf  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x00c0  DCX                      ;; HL = HL-1      
+0x00c1  MOV                      ;; A <- (HL)      
+0x00c2  CPI 0x03                 ;; A - data       
+0x00c4  JNZ 0x00c8               ;; if NZ, PC <- adr
+0x00c7  DCR                      ;; A <- A-1       
+0x00c8  STA 0x2008               ;; (adr) <- A     
+0x00cb  CPI 0xfe                 ;; A - data       
+0x00cd  MVI 0x00                 ;; A <- byte 2    
+0x00cf  JNZ 0x00d3               ;; if NZ, PC <- adr
+0x00d2  INR                      ;; A <- A+1       
+0x00d3  STA 0x200d               ;; (adr) <- A     
+0x00d6  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x00d7  MVI 0x02                 ;; A <- byte 2    
+0x00d9  STA 0x21fb               ;; (adr) <- A     
+0x00dc  STA 0x22fb               ;; (adr) <- A     
+0x00df  JMP 0x08e4               ;; PC <= adr      
+0x00e2  NOP                      
+0x00e3  NOP                      
+0x00e4  NOP                      
+0x00e5  NOP                      
+0x00e6  NOP                      
+0x00e7  NOP                      
+0x00e8  NOP                      
+0x00e9  NOP                      
+0x00ea  NOP                      
+0x00eb  NOP                      
+0x00ec  NOP                      
+0x00ed  NOP                      
+0x00ee  NOP                      
+0x00ef  NOP                      
+0x00f0  NOP                      
+0x00f1  NOP                      
+0x00f2  NOP                      
+0x00f3  NOP                      
+0x00f4  NOP                      
+0x00f5  NOP                      
+0x00f6  NOP                      
+0x00f7  NOP                      
+0x00f8  NOP                      
+0x00f9  NOP                      
+0x00fa  NOP                      
+0x00fb  NOP                      
+0x00fc  NOP                      
+0x00fd  NOP                      
+0x00fe  NOP                      
+0x00ff  NOP                      
+0x0100  LXI 0x2002               ;; H <- byte 3, L <- byte 2
+0x0103  MOV                      ;; A <- (HL)      
+0x0104  ANA                      ;; A <- A & A     
+0x0105  JNZ 0x1538               ;; if NZ, PC <- adr
+0x0108  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0109  LDA 0x2006               ;; A <- (adr)     
+0x010c  MOV                      ;; L <- A         
+0x010d  LDA 0x2067               ;; A <- (adr)     
+0x0110  MOV                      ;; H <- A         
+0x0111  MOV                      ;; A <- (HL)      
+0x0112  ANA                      ;; A <- A & A     
+0x0113  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0114  JZ 0x0136                ;; if Z, PC <- adr
+0x0117  INX                      ;; HL <- HL + 1   
+0x0118  INX                      ;; HL <- HL + 1   
+0x0119  MOV                      ;; A <- (HL)      
+0x011a  INX                      ;; HL <- HL + 1   
+0x011b  MOV                      ;; B <- (HL)      
+0x011c  ANI 0xfe                 ;; A <- A & data  
+0x011e  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x011f  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0120  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0121  MOV                      ;; E <- A         
+0x0122  MVI 0x00                 ;; D <- byte 2    
+0x0124  LXI 0x1c00               ;; H <- byte 3, L <- byte 2
+0x0127  DAD                      ;; HL = HL + DE   
+0x0128  XCHG                     ;; H <-> D; L <-> E
+0x0129  MOV                      ;; A <- B         
+0x012a  ANA                      ;; A <- A & A     
+0x012b  CNZ 0x013b               ;; if NZ, CALL adr
+0x012e  LHLD 0x200b              ;; L <- (adr); H<-(adr+1)
+0x0131  MVI 0x10                 ;; B <- byte 2    
+0x0133  CALL 0x15d3              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0136  XRA                      ;; A <- A ^ A     
+0x0137  STA 0x2000               ;; (adr) <- A     
+0x013a  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x013b  LXI 0x0030               ;; H <- byte 3, L <- byte 2
+0x013e  DAD                      ;; HL = HL + DE   
+0x013f  XCHG                     ;; H <-> D; L <-> E
+0x0140  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0141  LDA 0x2068               ;; A <- (adr)     
+0x0144  ANA                      ;; A <- A & A     
+0x0145  RZ                       ;; if Z, RET      
+0x0146  LDA 0x2000               ;; A <- (adr)     
+0x0149  ANA                      ;; A <- A & A     
+0x014a  RNZ                      ;; if NZ, RET     
+0x014b  LDA 0x2067               ;; A <- (adr)     
+0x014e  MOV                      ;; H <- A         
+0x014f  LDA 0x2006               ;; A <- (adr)     
+0x0152  MVI 0x02                 ;; D <- byte 2    
+0x0154  INR                      ;; A <- A+1       
+0x0155  CPI 0x37                 ;; A - data       
+0x0157  CZ 0x01a1                ;; if Z, CALL adr 
+0x015a  MOV                      ;; L <- A         
+0x015b  MOV                      ;; B <- (HL)      
+0x015c  DCR                      ;; B <- B-1       
+0x015d  JNZ 0x0154               ;; if NZ, PC <- adr
+0x0160  STA 0x2006               ;; (adr) <- A     
+0x0163  CALL 0x017a              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0166  MOV                      ;; H <- C         
+0x0167  SHLD 0x200b              ;; (adr) <-L; (adr+1)<-H
+0x016a  MOV                      ;; A <- L         
+0x016b  CPI 0x28                 ;; A - data       
+0x016d  JC 0x1971                ;; if CY, PC<-adr 
+0x0170  MOV                      ;; A <- D         
+0x0171  STA 0x2004               ;; (adr) <- A     
+0x0174  MVI 0x01                 ;; A <- byte 2    
+0x0176  STA 0x2000               ;; (adr) <- A     
+0x0179  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x017a  MVI 0x00                 ;; D <- byte 2    
+0x017c  MOV                      ;; A <- L         
+0x017d  LXI 0x2009               ;; H <- byte 3, L <- byte 2
+0x0180  MOV                      ;; B <- (HL)      
+0x0181  INX                      ;; HL <- HL + 1   
+0x0182  MOV                      ;; C <- (HL)      
+0x0183  CPI 0x0b                 ;; A - data       
+0x0185  JM 0x0194                ;; if M, PC <- adr
+0x0188  SBI 0x0b                 ;; A <- A - data - CY
+0x018a  MOV                      ;; E <- A         
+0x018b  MOV                      ;; A <- B         
+0x018c  ADI 0x10                 ;; A <- A + byte  
+0x018e  MOV                      ;; B <- A         
+0x018f  MOV                      ;; A <- E         
+0x0190  INR                      ;; D <- D+1       
+0x0191  JMP 0x0183               ;; PC <= adr      
+0x0194  MOV                      ;; L <- B         
+0x0195  ANA                      ;; A <- A & A     
+0x0196  RZ                       ;; if Z, RET      
+0x0197  MOV                      ;; E <- A         
+0x0198  MOV                      ;; A <- C         
+0x0199  ADI 0x10                 ;; A <- A + byte  
+0x019b  MOV                      ;; C <- A         
+0x019c  MOV                      ;; A <- E         
+0x019d  DCR                      ;; A <- A-1       
+0x019e  JMP 0x0195               ;; PC <= adr      
+0x01a1  DCR                      ;; D <- D-1       
+0x01a2  JZ 0x01cd                ;; if Z, PC <- adr
+0x01a5  LXI 0x2006               ;; H <- byte 3, L <- byte 2
+0x01a8  MVI 0x00                 ;; (HL) <- byte 2 
+0x01aa  INX                      ;; HL <- HL + 1   
+0x01ab  MOV                      ;; C <- (HL)      
+0x01ac  MVI 0x00                 ;; (HL) <- byte 2 
+0x01ae  CALL 0x01d9              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x01b1  LXI 0x2005               ;; H <- byte 3, L <- byte 2
+0x01b4  MOV                      ;; A <- (HL)      
+0x01b5  INR                      ;; A <- A+1       
+0x01b6  ANI 0x01                 ;; A <- A & data  
+0x01b8  MOV                      ;; (HL) <- A      
+0x01b9  XRA                      ;; A <- A ^ A     
+0x01ba  LXI 0x2067               ;; H <- byte 3, L <- byte 2
+0x01bd  MOV                      ;; H <- (HL)      
+0x01be  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01bf  NOP                      
+0x01c0  LXI 0x2100               ;; H <- byte 3, L <- byte 2
+0x01c3  MVI 0x37                 ;; B <- byte 2    
+0x01c5  MVI 0x01                 ;; (HL) <- byte 2 
+0x01c7  INX                      ;; HL <- HL + 1   
+0x01c8  DCR                      ;; B <- B-1       
+0x01c9  JNZ 0x01c5               ;; if NZ, PC <- adr
+0x01cc  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01cd  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x01ce  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01cf  MVI 0x01                 ;; A <- byte 2    
+0x01d1  MVI 0xe0                 ;; B <- byte 2    
+0x01d3  LXI 0x2402               ;; H <- byte 3, L <- byte 2
+0x01d6  JMP 0x14cc               ;; PC <= adr      
+0x01d9  INX                      ;; HL <- HL + 1   
+0x01da  MOV                      ;; B <- (HL)      
+0x01db  INX                      ;; HL <- HL + 1   
+0x01dc  MOV                      ;; A <- C         
+0x01dd  ADD                      ;; A <- A + (HL)  
+0x01de  MOV                      ;; (HL) <- A      
+0x01df  INX                      ;; HL <- HL + 1   
+0x01e0  MOV                      ;; A <- B         
+0x01e1  ADD                      ;; A <- A + (HL)  
+0x01e2  MOV                      ;; (HL) <- A      
+0x01e3  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x01e4  MVI 0xc0                 ;; B <- byte 2    
+0x01e6  LXI 0x1b00               ;; D <- byte 3, E <- byte 2
+0x01e9  LXI 0x2000               ;; H <- byte 3, L <- byte 2
+0x01ec  JMP 0x1a32               ;; PC <= adr      
+0x01ef  LXI 0x2142               ;; H <- byte 3, L <- byte 2
+0x01f2  JMP 0x01f8               ;; PC <= adr      
+0x01f5  LXI 0x2242               ;; H <- byte 3, L <- byte 2
+0x01f8  MVI 0x04                 ;; C <- byte 2    
+0x01fa  LXI 0x1d20               ;; D <- byte 3, E <- byte 2
+0x01fd  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x01fe  MVI 0x2c                 ;; B <- byte 2    
+0x0200  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0203  POP                      ;; E <- (sp); D <- (sp+1); sp <- sp+2
+0x0204  DCR                      ;; C <-C-1        
+0x0205  JNZ 0x01fd               ;; if NZ, PC <- adr
+0x0208  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0209  MVI 0x01                 ;; A <- byte 2    
+0x020b  JMP 0x021b               ;; PC <= adr      
+0x020e  MVI 0x01                 ;; A <- byte 2    
+0x0210  JMP 0x0214               ;; PC <= adr      
+0x0213  XRA                      ;; A <- A ^ A     
+0x0214  LXI 0x2242               ;; D <- byte 3, E <- byte 2
+0x0217  JMP 0x021e               ;; PC <= adr      
+0x021a  XRA                      ;; A <- A ^ A     
+0x021b  LXI 0x2142               ;; D <- byte 3, E <- byte 2
+0x021e  STA 0x2081               ;; (adr) <- A     
+0x0221  LXI 0x1602               ;; B <- byte 3, C <- byte 2
+0x0224  LXI 0x2806               ;; H <- byte 3, L <- byte 2
+0x0227  MVI 0x04                 ;; A <- byte 2    
+0x0229  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x022a  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x022b  LDA 0x2081               ;; A <- (adr)     
+0x022e  ANA                      ;; A <- A & A     
+0x022f  JNZ 0x0242               ;; if NZ, PC <- adr
+0x0232  CALL 0x1a69              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0235  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0236  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x0237  DCR                      ;; A <- A-1       
+0x0238  RZ                       ;; if Z, RET      
+0x0239  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x023a  LXI 0x02e0               ;; D <- byte 3, E <- byte 2
+0x023d  DAD                      ;; HL = HL + DE   
+0x023e  POP                      ;; E <- (sp); D <- (sp+1); sp <- sp+2
+0x023f  JMP 0x0229               ;; PC <= adr      
+0x0242  CALL 0x147c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0245  JMP 0x0235               ;; PC <= adr      
+0x0248  LXI 0x2010               ;; H <- byte 3, L <- byte 2
+0x024b  MOV                      ;; A <- (HL)      
+0x024c  CPI 0xff                 ;; A - data       
+0x024e  RZ                       ;; if Z, RET      
+0x024f  CPI 0xfe                 ;; A - data       
+0x0251  JZ 0x0281                ;; if Z, PC <- adr
+0x0254  INX                      ;; HL <- HL + 1   
+0x0255  MOV                      ;; B <- (HL)      
+0x0256  MOV                      ;; C <- A         
+0x0257  ORA                      ;; A <- A | B     
+0x0258  MOV                      ;; A <- C         
+0x0259  JNZ 0x0277               ;; if NZ, PC <- adr
+0x025c  INX                      ;; HL <- HL + 1   
+0x025d  MOV                      ;; A <- (HL)      
+0x025e  ANA                      ;; A <- A & A     
+0x025f  JNZ 0x0288               ;; if NZ, PC <- adr
+0x0262  INX                      ;; HL <- HL + 1   
+0x0263  MOV                      ;; E <- (HL)      
+0x0264  INX                      ;; HL <- HL + 1   
+0x0265  MOV                      ;; D <- (HL)      
+0x0266  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0267  XCHG                     ;; H <-> D; L <-> E
+0x0268  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x0269  LXI 0x026f               ;; H <- byte 3, L <- byte 2
+0x026c  XTHL                     ;; L <-> (SP); H <-> (SP+1)
+0x026d  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x026e  PCHL                     ;; PC.hi <- H; PC.lo <- L
+0x026f  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0270  LXI 0x000c               ;; D <- byte 3, E <- byte 2
+0x0273  DAD                      ;; HL = HL + DE   
+0x0274  JMP 0x024b               ;; PC <= adr      
+0x0277  DCR                      ;; B <- B-1       
+0x0278  INR                      ;; B <- B+1       
+0x0279  JNZ 0x027d               ;; if NZ, PC <- adr
+0x027c  DCR                      ;; A <- A-1       
+0x027d  DCR                      ;; B <- B-1       
+0x027e  MOV                      ;; (HL) <- B      
+0x027f  DCX                      ;; HL = HL-1      
+0x0280  MOV                      ;; (HL) <- A      
+0x0281  LXI 0x0010               ;; D <- byte 3, E <- byte 2
+0x0284  DAD                      ;; HL = HL + DE   
+0x0285  JMP 0x024b               ;; PC <= adr      
+0x0288  DCR                      ;; (HL) <- (HL)-1 
+0x0289  DCX                      ;; HL = HL-1      
+0x028a  DCX                      ;; HL = HL-1      
+0x028b  JMP 0x0281               ;; PC <= adr      
+0x028e  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x028f  INX                      ;; HL <- HL + 1   
+0x0290  MOV                      ;; A <- (HL)      
+0x0291  CPI 0xff                 ;; A - data       
+0x0293  JZ 0x033b                ;; if Z, PC <- adr
+0x0296  INX                      ;; HL <- HL + 1   
+0x0297  DCR                      ;; (HL) <- (HL)-1 
+0x0298  RNZ                      ;; if NZ, RET     
+0x0299  MOV                      ;; B <- A         
+0x029a  XRA                      ;; A <- A ^ A     
+0x029b  STA 0x2068               ;; (adr) <- A     
+0x029e  STA 0x2069               ;; (adr) <- A     
+0x02a1  MVI 0x30                 ;; A <- byte 2    
+0x02a3  STA 0x206a               ;; (adr) <- A     
+0x02a6  MOV                      ;; A <- B         
+0x02a7  MVI 0x05                 ;; (HL) <- byte 2 
+0x02a9  INX                      ;; HL <- HL + 1   
+0x02aa  DCR                      ;; (HL) <- (HL)-1 
+0x02ab  JNZ 0x039b               ;; if NZ, PC <- adr
+0x02ae  LHLD 0x201a              ;; L <- (adr); H<-(adr+1)
+0x02b1  MVI 0x10                 ;; B <- byte 2    
+0x02b3  CALL 0x1424              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02b6  LXI 0x2010               ;; H <- byte 3, L <- byte 2
+0x02b9  LXI 0x1b10               ;; D <- byte 3, E <- byte 2
+0x02bc  MVI 0x10                 ;; B <- byte 2    
+0x02be  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02c1  MVI 0x00                 ;; B <- byte 2    
+0x02c3  CALL 0x19dc              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02c6  LDA 0x206d               ;; A <- (adr)     
+0x02c9  ANA                      ;; A <- A & A     
+0x02ca  RNZ                      ;; if NZ, RET     
+0x02cb  LDA 0x20ef               ;; A <- (adr)     
+0x02ce  ANA                      ;; A <- A & A     
+0x02cf  RZ                       ;; if Z, RET      
+0x02d0  LXI 0x2400               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x02d3  EI                       ;; special        
+0x02d4  CALL 0x19d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02d7  CALL 0x092e              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02da  ANA                      ;; A <- A & A     
+0x02db  JZ 0x166d                ;; if Z, PC <- adr
+0x02de  CALL 0x18e7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02e1  MOV                      ;; A <- (HL)      
+0x02e2  ANA                      ;; A <- A & A     
+0x02e3  JZ 0x032c                ;; if Z, PC <- adr
+0x02e6  LDA 0x20ce               ;; A <- (adr)     
+0x02e9  ANA                      ;; A <- A & A     
+0x02ea  JZ 0x032c                ;; if Z, PC <- adr
+0x02ed  LDA 0x2067               ;; A <- (adr)     
+0x02f0  PUSH                     ;; (sp-2)<-flags; (sp-1)<-A; sp <- sp - 2
+0x02f1  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x02f2  JC 0x0332                ;; if CY, PC<-adr 
+0x02f5  CALL 0x020e              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02f8  CALL 0x0878              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x02fb  MOV                      ;; (HL) <- E      
+0x02fc  INX                      ;; HL <- HL + 1   
+0x02fd  MOV                      ;; (HL) <- D      
+0x02fe  DCX                      ;; HL = HL-1      
+0x02ff  DCX                      ;; HL = HL-1      
+0x0300  MOV                      ;; (HL) <- B      
+0x0301  NOP                      
+0x0302  CALL 0x01e4              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0305  POP                      ;; flags <- (sp); A <- (sp+1); sp <- sp+2
+0x0306  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0307  MVI 0x21                 ;; A <- byte 2    
+0x0309  MVI 0x00                 ;; B <- byte 2    
+0x030b  JNC 0x0312               ;; if NCY, PC<-adr
+0x030e  MVI 0x20                 ;; B <- byte 2    
+0x0310  MVI 0x22                 ;; A <- byte 2    
+0x0312  STA 0x2067               ;; (adr) <- A     
+0x0315  CALL 0x0ab6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0318  XRA                      ;; A <- A ^ A     
+0x0319  STA 0x2011               ;; (adr) <- A     
+0x031c  MOV                      ;; A <- B         
+0x031d  OUT 0x05                 ;; special        
+0x031f  INR                      ;; A <- A+1       
+0x0320  STA 0x2098               ;; (adr) <- A     
+0x0323  CALL 0x09d6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0326  CALL 0x1a7f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0329  JMP 0x07f9               ;; PC <= adr      
+0x032c  CALL 0x1a7f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x032f  JMP 0x0817               ;; PC <= adr      
+0x0332  CALL 0x0209              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0335  JMP 0x02f8               ;; PC <= adr      
+0x0338  NOP                      
+0x0339  NOP                      
+0x033a  NOP                      
+0x033b  LXI 0x2068               ;; H <- byte 3, L <- byte 2
+0x033e  MVI 0x01                 ;; (HL) <- byte 2 
+0x0340  INX                      ;; HL <- HL + 1   
+0x0341  MOV                      ;; A <- (HL)      
+0x0342  ANA                      ;; A <- A & A     
+0x0343  JMP 0x03b0               ;; PC <= adr      
+0x0346  NOP                      
+0x0347  DCX                      ;; HL = HL-1      
+0x0348  MVI 0x01                 ;; (HL) <- byte 2 
+0x034a  LDA 0x201b               ;; A <- (adr)     
+0x034d  MOV                      ;; B <- A         
+0x034e  LDA 0x20ef               ;; A <- (adr)     
+0x0351  ANA                      ;; A <- A & A     
+0x0352  JNZ 0x0363               ;; if NZ, PC <- adr
+0x0355  LDA 0x201d               ;; A <- (adr)     
+0x0358  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x0359  JC 0x0381                ;; if CY, PC<-adr 
+0x035c  RRC                      ;; A = A >> 1; bit 7 = prev bit 0; CY = prev bit 0
+0x035d  JC 0x038e                ;; if CY, PC<-adr 
+0x0360  JMP 0x036f               ;; PC <= adr      
+0x0363  CALL 0x17c0              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0366  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0367  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x0368  JC 0x0381                ;; if CY, PC<-adr 
+0x036b  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x036c  JC 0x038e                ;; if CY, PC<-adr 
+0x036f  LXI 0x2018               ;; H <- byte 3, L <- byte 2
+0x0372  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0375  CALL 0x1a47              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0378  CALL 0x1439              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x037b  MVI 0x00                 ;; A <- byte 2    
+0x037d  STA 0x2012               ;; (adr) <- A     
+0x0380  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0381  MOV                      ;; A <- B         
+0x0382  CPI 0xd9                 ;; A - data       
+0x0384  JZ 0x036f                ;; if Z, PC <- adr
+0x0387  INR                      ;; A <- A+1       
+0x0388  STA 0x201b               ;; (adr) <- A     
+0x038b  JMP 0x036f               ;; PC <= adr      
+0x038e  MOV                      ;; A <- B         
+0x038f  CPI 0x30                 ;; A - data       
+0x0391  JZ 0x036f                ;; if Z, PC <- adr
+0x0394  DCR                      ;; A <- A-1       
+0x0395  STA 0x201b               ;; (adr) <- A     
+0x0398  JMP 0x036f               ;; PC <= adr      
+0x039b  INR                      ;; A <- A+1       
+0x039c  ANI 0x01                 ;; A <- A & data  
+0x039e  STA 0x2015               ;; (adr) <- A     
+0x03a1  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x03a2  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x03a3  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x03a4  RLC                      ;; A = A << 1; bit 0 = prev bit 7; CY = prev bit 7
+0x03a5  LXI 0x1c70               ;; H <- byte 3, L <- byte 2
+0x03a8  ADD                      ;; A <- A + L     
+0x03a9  MOV                      ;; L <- A         
+0x03aa  SHLD 0x2018              ;; (adr) <-L; (adr+1)<-H
+0x03ad  JMP 0x036f               ;; PC <= adr      
+0x03b0  JNZ 0x034a               ;; if NZ, PC <- adr
+0x03b3  INX                      ;; HL <- HL + 1   
+0x03b4  DCR                      ;; (HL) <- (HL)-1 
+0x03b5  JNZ 0x034a               ;; if NZ, PC <- adr
+0x03b8  JMP 0x0346               ;; PC <= adr      
+0x03bb  LXI 0x202a               ;; D <- byte 3, E <- byte 2
+0x03be  CALL 0x1a06              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x03c1  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x03c2  RNC                      ;; if NCY, RET    
+0x03c3  INX                      ;; HL <- HL + 1   
+0x03c4  MOV                      ;; A <- (HL)      
+0x03c5  ANA                      ;; A <- A & A     
+0x03c6  RZ                       ;; if Z, RET      
+0x03c7  CPI 0x01                 ;; A - data       
+0x03c9  JZ 0x03fa                ;; if Z, PC <- adr
+0x03cc  CPI 0x02                 ;; A - data       
+0x03ce  JZ 0x040a                ;; if Z, PC <- adr
+0x03d1  INX                      ;; HL <- HL + 1   
+0x03d2  CPI 0x03                 ;; A - data       
+0x03d4  JNZ 0x042a               ;; if NZ, PC <- adr
+0x03d7  DCR                      ;; (HL) <- (HL)-1 
+0x03d8  JZ 0x0436                ;; if Z, PC <- adr
+0x03db  MOV                      ;; A <- (HL)      
+0x03dc  CPI 0x0f                 ;; A - data       
+0x03de  RNZ                      ;; if NZ, RET     
+0x03df  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x03e0  CALL 0x0430              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x03e3  CALL 0x1452              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x03e6  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x03e7  INX                      ;; HL <- HL + 1   
+0x03e8  INR                      ;; (HL) <- (HL)+1 
+0x03e9  INX                      ;; HL <- HL + 1   
+0x03ea  INX                      ;; HL <- HL + 1   
+0x03eb  DCR                      ;; (HL) <- (HL)-1 
+0x03ec  DCR                      ;; (HL) <- (HL)-1 
+0x03ed  INX                      ;; HL <- HL + 1   
+0x03ee  DCR                      ;; (HL) <- (HL)-1 
+0x03ef  DCR                      ;; (HL) <- (HL)-1 
+0x03f0  DCR                      ;; (HL) <- (HL)-1 
+0x03f1  INX                      ;; HL <- HL + 1   
+0x03f2  MVI 0x08                 ;; (HL) <- byte 2 
+0x03f4  CALL 0x0430              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x03f7  JMP 0x1400               ;; PC <= adr      
+0x03fa  INR                      ;; A <- A+1       
+0x03fb  MOV                      ;; (HL) <- A      
+0x03fc  LDA 0x201b               ;; A <- (adr)     
+0x03ff  ADI 0x08                 ;; A <- A + byte  
+0x0401  STA 0x202a               ;; (adr) <- A     
+0x0404  CALL 0x0430              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0407  JMP 0x1400               ;; PC <= adr      
+0x040a  CALL 0x0430              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x040d  PUSH                     ;; (sp-2)<-E; (sp-1)<-D; sp <- sp - 2
+0x040e  PUSH                     ;; (sp-2)<-L; (sp-1)<-H; sp <- sp - 2
+0x040f  PUSH                     ;; (sp-2)<-C; (sp-1)<-B; sp <- sp - 2
+0x0410  CALL 0x1452              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0413  POP                      ;; C <- (sp); B <- (sp+1); sp <- sp+2
+0x0414  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0415  POP                      ;; E <- (sp); D <- (sp+1); sp <- sp+2
+0x0416  LDA 0x202c               ;; A <- (adr)     
+0x0419  ADD                      ;; A <- A + L     
+0x041a  MOV                      ;; L <- A         
+0x041b  STA 0x2029               ;; (adr) <- A     
+0x041e  CALL 0x1491              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0421  LDA 0x2061               ;; A <- (adr)     
+0x0424  ANA                      ;; A <- A & A     
+0x0425  RZ                       ;; if Z, RET      
+0x0426  STA 0x2002               ;; (adr) <- A     
+0x0429  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x042a  CPI 0x05                 ;; A - data       
+0x042c  RZ                       ;; if Z, RET      
+0x042d  JMP 0x0436               ;; PC <= adr      
+0x0430  LXI 0x2027               ;; H <- byte 3, L <- byte 2
+0x0433  JMP 0x1a3b               ;; PC <= adr      
+0x0436  CALL 0x0430              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0439  CALL 0x1452              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x043c  LXI 0x2025               ;; H <- byte 3, L <- byte 2
+0x043f  LXI 0x1b25               ;; D <- byte 3, E <- byte 2
+0x0442  MVI 0x07                 ;; B <- byte 2    
+0x0444  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0447  LHLD 0x208d              ;; L <- (adr); H<-(adr+1)
+0x044a  INR                      ;; L <- L+1       
+0x044b  MOV                      ;; A <- L         
+0x044c  CPI 0x63                 ;; A - data       
+0x044e  JC 0x0453                ;; if CY, PC<-adr 
+0x0451  MVI 0x54                 ;; L <- byte 2    
+0x0453  SHLD 0x208d              ;; (adr) <-L; (adr+1)<-H
+0x0456  LHLD 0x208f              ;; L <- (adr); H<-(adr+1)
+0x0459  INR                      ;; L <- L+1       
+0x045a  SHLD 0x208f              ;; (adr) <-L; (adr+1)<-H
+0x045d  LDA 0x2084               ;; A <- (adr)     
+0x0460  ANA                      ;; A <- A & A     
+0x0461  RNZ                      ;; if NZ, RET     
+0x0462  MOV                      ;; A <- (HL)      
+0x0463  ANI 0x01                 ;; A <- A & data  
+0x0465  LXI 0x0229               ;; B <- byte 3, C <- byte 2
+0x0468  JNZ 0x046e               ;; if NZ, PC <- adr
+0x046b  LXI 0xfee0               ;; B <- byte 3, C <- byte 2
+0x046e  LXI 0x208a               ;; H <- byte 3, L <- byte 2
+0x0471  MOV                      ;; (HL) <- C      
+0x0472  INX                      ;; HL <- HL + 1   
+0x0473  INX                      ;; HL <- HL + 1   
+0x0474  MOV                      ;; (HL) <- B      
+0x0475  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0476  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0477  LDA 0x1b32               ;; A <- (adr)     
+0x047a  STA 0x2032               ;; (adr) <- A     
+0x047d  LHLD 0x2038              ;; L <- (adr); H<-(adr+1)
+0x0480  MOV                      ;; A <- L         
+0x0481  ORA                      ;; A <- A | H     
+0x0482  JNZ 0x048a               ;; if NZ, PC <- adr
+0x0485  DCX                      ;; HL = HL-1      
+0x0486  SHLD 0x2038              ;; (adr) <-L; (adr+1)<-H
+0x0489  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x048a  LXI 0x2035               ;; D <- byte 3, E <- byte 2
+0x048d  MVI 0xf9                 ;; A <- byte 2    
+0x048f  CALL 0x0550              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0492  LDA 0x2046               ;; A <- (adr)     
+0x0495  STA 0x2070               ;; (adr) <- A     
+0x0498  LDA 0x2056               ;; A <- (adr)     
+0x049b  STA 0x2071               ;; (adr) <- A     
+0x049e  CALL 0x0563              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x04a1  LDA 0x2078               ;; A <- (adr)     
+0x04a4  ANA                      ;; A <- A & A     
+0x04a5  LXI 0x2035               ;; H <- byte 3, L <- byte 2
+0x04a8  JNZ 0x055b               ;; if NZ, PC <- adr
+0x04ab  LXI 0x1b30               ;; D <- byte 3, E <- byte 2
+0x04ae  LXI 0x2030               ;; H <- byte 3, L <- byte 2
+0x04b1  MVI 0x10                 ;; B <- byte 2    
+0x04b3  JMP 0x1a32               ;; PC <= adr      
+0x04b6  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x04b7  LDA 0x206e               ;; A <- (adr)     
+0x04ba  ANA                      ;; A <- A & A     
+0x04bb  RNZ                      ;; if NZ, RET     
+0x04bc  LDA 0x2080               ;; A <- (adr)     
+0x04bf  CPI 0x01                 ;; A - data       
+0x04c1  RNZ                      ;; if NZ, RET     
+0x04c2  LXI 0x2045               ;; D <- byte 3, E <- byte 2
+0x04c5  MVI 0xed                 ;; A <- byte 2    
+0x04c7  CALL 0x0550              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x04ca  LDA 0x2036               ;; A <- (adr)     
+0x04cd  STA 0x2070               ;; (adr) <- A     
+0x04d0  LDA 0x2056               ;; A <- (adr)     
+0x04d3  STA 0x2071               ;; (adr) <- A     
+0x04d6  CALL 0x0563              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x04d9  LDA 0x2076               ;; A <- (adr)     
+0x04dc  CPI 0x10                 ;; A - data       
+0x04de  JC 0x04e7                ;; if CY, PC<-adr 
+0x04e1  LDA 0x1b48               ;; A <- (adr)     
+0x04e4  STA 0x2076               ;; (adr) <- A     
+0x04e7  LDA 0x2078               ;; A <- (adr)     
+0x04ea  ANA                      ;; A <- A & A     
+0x04eb  LXI 0x2045               ;; H <- byte 3, L <- byte 2
+0x04ee  JNZ 0x055b               ;; if NZ, PC <- adr
+0x04f1  LXI 0x1b40               ;; D <- byte 3, E <- byte 2
+0x04f4  LXI 0x2040               ;; H <- byte 3, L <- byte 2
+0x04f7  MVI 0x10                 ;; B <- byte 2    
+0x04f9  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x04fc  LDA 0x2082               ;; A <- (adr)     
+0x04ff  DCR                      ;; A <- A-1       
+0x0500  JNZ 0x0508               ;; if NZ, PC <- adr
+0x0503  MVI 0x01                 ;; A <- byte 2    
+0x0505  STA 0x206e               ;; (adr) <- A     
+0x0508  LHLD 0x2076              ;; L <- (adr); H<-(adr+1)
+0x050b  JMP 0x067e               ;; PC <= adr      
+0x050e  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x050f  LXI 0x2055               ;; D <- byte 3, E <- byte 2
+0x0512  MVI 0xdb                 ;; A <- byte 2    
+0x0514  CALL 0x0550              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0517  LDA 0x2046               ;; A <- (adr)     
+0x051a  STA 0x2070               ;; (adr) <- A     
+0x051d  LDA 0x2036               ;; A <- (adr)     
+0x0520  STA 0x2071               ;; (adr) <- A     
+0x0523  CALL 0x0563              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0526  LDA 0x2076               ;; A <- (adr)     
+0x0529  CPI 0x15                 ;; A - data       
+0x052b  JC 0x0534                ;; if CY, PC<-adr 
+0x052e  LDA 0x1b58               ;; A <- (adr)     
+0x0531  STA 0x2076               ;; (adr) <- A     
+0x0534  LDA 0x2078               ;; A <- (adr)     
+0x0537  ANA                      ;; A <- A & A     
+0x0538  LXI 0x2055               ;; H <- byte 3, L <- byte 2
+0x053b  JNZ 0x055b               ;; if NZ, PC <- adr
+0x053e  LXI 0x1b50               ;; D <- byte 3, E <- byte 2
+0x0541  LXI 0x2050               ;; H <- byte 3, L <- byte 2
+0x0544  MVI 0x10                 ;; B <- byte 2    
+0x0546  CALL 0x1a32              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0549  LHLD 0x2076              ;; L <- (adr); H<-(adr+1)
+0x054c  SHLD 0x2058              ;; (adr) <-L; (adr+1)<-H
+0x054f  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0550  STA 0x207f               ;; (adr) <- A     
+0x0553  LXI 0x2073               ;; H <- byte 3, L <- byte 2
+0x0556  MVI 0x0b                 ;; B <- byte 2    
+0x0558  JMP 0x1a32               ;; PC <= adr      
+0x055b  LXI 0x2073               ;; D <- byte 3, E <- byte 2
+0x055e  MVI 0x0b                 ;; B <- byte 2    
+0x0560  JMP 0x1a32               ;; PC <= adr      
+0x0563  LXI 0x2073               ;; H <- byte 3, L <- byte 2
+0x0566  MOV                      ;; A <- (HL)      
+0x0567  ANI 0x80                 ;; A <- A & data  
+0x0569  JNZ 0x05c1               ;; if NZ, PC <- adr
+0x056c  LDA 0x20c1               ;; A <- (adr)     
+0x056f  CPI 0x04                 ;; A - data       
+0x0571  LDA 0x2069               ;; A <- (adr)     
+0x0574  JZ 0x05b7                ;; if Z, PC <- adr
+0x0577  ANA                      ;; A <- A & A     
+0x0578  RZ                       ;; if Z, RET      
+0x0579  INX                      ;; HL <- HL + 1   
+0x057a  MVI 0x00                 ;; (HL) <- byte 2 
+0x057c  LDA 0x2070               ;; A <- (adr)     
+0x057f  ANA                      ;; A <- A & A     
+0x0580  JZ 0x0589                ;; if Z, PC <- adr
+0x0583  MOV                      ;; B <- A         
+0x0584  LDA 0x20cf               ;; A <- (adr)     
+0x0587  CMP                      ;; A - B          
+0x0588  RNC                      ;; if NCY, RET    
+0x0589  LDA 0x2071               ;; A <- (adr)     
+0x058c  ANA                      ;; A <- A & A     
+0x058d  JZ 0x0596                ;; if Z, PC <- adr
+0x0590  MOV                      ;; B <- A         
+0x0591  LDA 0x20cf               ;; A <- (adr)     
+0x0594  CMP                      ;; A - B          
+0x0595  RNC                      ;; if NCY, RET    
+0x0596  INX                      ;; HL <- HL + 1   
+0x0597  MOV                      ;; A <- (HL)      
+0x0598  ANA                      ;; A <- A & A     
+0x0599  JZ 0x061b                ;; if Z, PC <- adr
+0x059c  LHLD 0x2076              ;; L <- (adr); H<-(adr+1)
+0x059f  MOV                      ;; C <- (HL)      
+0x05a0  INX                      ;; HL <- HL + 1   
+0x05a1  NOP                      
+0x05a2  SHLD 0x2076              ;; (adr) <-L; (adr+1)<-H
+0x05a5  CALL 0x062f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05a8  RNC                      ;; if NCY, RET    
+0x05a9  CALL 0x017a              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05ac  MOV                      ;; A <- C         
+0x05ad  ADI 0x07                 ;; A <- A + byte  
+0x05af  MOV                      ;; H <- A         
+0x05b0  MOV                      ;; A <- L         
+0x05b1  SUI 0x0a                 ;; A <- A - data  
+0x05b3  MOV                      ;; L <- A         
+0x05b4  SHLD 0x207b              ;; (adr) <-L; (adr+1)<-H
+0x05b7  LXI 0x2073               ;; H <- byte 3, L <- byte 2
+0x05ba  MOV                      ;; A <- (HL)      
+0x05bb  ORI 0x80                 ;; A <- A | data  
+0x05bd  MOV                      ;; (HL) <- A      
+0x05be  INX                      ;; HL <- HL + 1   
+0x05bf  INR                      ;; (HL) <- (HL)+1 
+0x05c0  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x05c1  LXI 0x207c               ;; D <- byte 3, E <- byte 2
+0x05c4  CALL 0x1a06              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05c7  RNC                      ;; if NCY, RET    
+0x05c8  INX                      ;; HL <- HL + 1   
+0x05c9  MOV                      ;; A <- (HL)      
+0x05ca  ANI 0x01                 ;; A <- A & data  
+0x05cc  JNZ 0x0644               ;; if NZ, PC <- adr
+0x05cf  INX                      ;; HL <- HL + 1   
+0x05d0  INR                      ;; (HL) <- (HL)+1 
+0x05d1  CALL 0x0675              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05d4  LDA 0x2079               ;; A <- (adr)     
+0x05d7  ADI 0x03                 ;; A <- A + byte  
+0x05d9  LXI 0x207f               ;; H <- byte 3, L <- byte 2
+0x05dc  CMP                      ;; A - (HL)       
+0x05dd  JC 0x05e2                ;; if CY, PC<-adr 
+0x05e0  SUI 0x0c                 ;; A <- A - data  
+0x05e2  STA 0x2079               ;; (adr) <- A     
+0x05e5  LDA 0x207b               ;; A <- (adr)     
+0x05e8  MOV                      ;; B <- A         
+0x05e9  LDA 0x207e               ;; A <- (adr)     
+0x05ec  ADD                      ;; A <- A + B     
+0x05ed  STA 0x207b               ;; (adr) <- A     
+0x05f0  CALL 0x066c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x05f3  LDA 0x207b               ;; A <- (adr)     
+0x05f6  CPI 0x15                 ;; A - data       
+0x05f8  JC 0x0612                ;; if CY, PC<-adr 
+0x05fb  LDA 0x2061               ;; A <- (adr)     
+0x05fe  ANA                      ;; A <- A & A     
+0x05ff  RZ                       ;; if Z, RET      
+0x0600  LDA 0x207b               ;; A <- (adr)     
+0x0603  CPI 0x1e                 ;; A - data       
+0x0605  JC 0x0612                ;; if CY, PC<-adr 
+0x0608  CPI 0x27                 ;; A - data       
+0x060a  NOP                      
+0x060b  JNC 0x0612               ;; if NCY, PC<-adr
+0x060e  SUB                      ;; A <- A - A     
+0x060f  STA 0x2015               ;; (adr) <- A     
+0x0612  LDA 0x2073               ;; A <- (adr)     
+0x0615  ORI 0x01                 ;; A <- A | data  
+0x0617  STA 0x2073               ;; (adr) <- A     
+0x061a  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x061b  LDA 0x201b               ;; A <- (adr)     
+0x061e  ADI 0x08                 ;; A <- A + byte  
+0x0620  MOV                      ;; H <- A         
+0x0621  CALL 0x156f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0624  MOV                      ;; A <- C         
+0x0625  CPI 0x0c                 ;; A - data       
+0x0627  JC 0x05a5                ;; if CY, PC<-adr 
+0x062a  MVI 0x0b                 ;; C <- byte 2    
+0x062c  JMP 0x05a5               ;; PC <= adr      
+0x062f  DCR                      ;; C <-C-1        
+0x0630  LDA 0x2067               ;; A <- (adr)     
+0x0633  MOV                      ;; H <- A         
+0x0634  MOV                      ;; L <- C         
+0x0635  MVI 0x05                 ;; D <- byte 2    
+0x0637  MOV                      ;; A <- (HL)      
+0x0638  ANA                      ;; A <- A & A     
+0x0639  STC                      ;; CY = 1         
+0x063a  RNZ                      ;; if NZ, RET     
+0x063b  MOV                      ;; A <- L         
+0x063c  ADI 0x0b                 ;; A <- A + byte  
+0x063e  MOV                      ;; L <- A         
+0x063f  DCR                      ;; D <- D-1       
+0x0640  JNZ 0x0637               ;; if NZ, PC <- adr
+0x0643  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0644  LXI 0x2078               ;; H <- byte 3, L <- byte 2
+0x0647  DCR                      ;; (HL) <- (HL)-1 
+0x0648  MOV                      ;; A <- (HL)      
+0x0649  CPI 0x03                 ;; A - data       
+0x064b  JNZ 0x0667               ;; if NZ, PC <- adr
+0x064e  CALL 0x0675              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0651  LXI 0x1cdc               ;; H <- byte 3, L <- byte 2
+0x0654  SHLD 0x2079              ;; (adr) <-L; (adr+1)<-H
+0x0657  LXI 0x207c               ;; H <- byte 3, L <- byte 2
+0x065a  DCR                      ;; (HL) <- (HL)-1 
+0x065b  DCR                      ;; (HL) <- (HL)-1 
+0x065c  DCX                      ;; HL = HL-1      
+0x065d  DCR                      ;; (HL) <- (HL)-1 
+0x065e  DCR                      ;; (HL) <- (HL)-1 
+0x065f  MVI 0x06                 ;; A <- byte 2    
+0x0661  STA 0x207d               ;; (adr) <- A     
+0x0664  JMP 0x066c               ;; PC <= adr      
+0x0667  ANA                      ;; A <- A & A     
+0x0668  RNZ                      ;; if NZ, RET     
+0x0669  JMP 0x0675               ;; PC <= adr      
+0x066c  LXI 0x2079               ;; H <- byte 3, L <- byte 2
+0x066f  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0672  JMP 0x1491               ;; PC <= adr      
+0x0675  LXI 0x2079               ;; H <- byte 3, L <- byte 2
+0x0678  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x067b  JMP 0x1452               ;; PC <= adr      
+0x067e  SHLD 0x2048              ;; (adr) <-L; (adr+1)<-H
+0x0681  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x0682  POP                      ;; L <- (sp); H <- (sp+1); sp <- sp+2
+0x0683  LDA 0x2080               ;; A <- (adr)     
+0x0686  CPI 0x02                 ;; A - data       
+0x0688  RNZ                      ;; if NZ, RET     
+0x0689  LXI 0x2083               ;; H <- byte 3, L <- byte 2
+0x068c  MOV                      ;; A <- (HL)      
+0x068d  ANA                      ;; A <- A & A     
+0x068e  JZ 0x050f                ;; if Z, PC <- adr
+0x0691  LDA 0x2056               ;; A <- (adr)     
+0x0694  ANA                      ;; A <- A & A     
+0x0695  JNZ 0x050f               ;; if NZ, PC <- adr
+0x0698  INX                      ;; HL <- HL + 1   
+0x0699  MOV                      ;; A <- (HL)      
+0x069a  ANA                      ;; A <- A & A     
+0x069b  JNZ 0x06ab               ;; if NZ, PC <- adr
+0x069e  LDA 0x2082               ;; A <- (adr)     
+0x06a1  CPI 0x08                 ;; A - data       
+0x06a3  JC 0x050f                ;; if CY, PC<-adr 
+0x06a6  MVI 0x01                 ;; (HL) <- byte 2 
+0x06a8  CALL 0x073c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06ab  LXI 0x208a               ;; D <- byte 3, E <- byte 2
+0x06ae  CALL 0x1a06              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06b1  RNC                      ;; if NCY, RET    
+0x06b2  LXI 0x2085               ;; H <- byte 3, L <- byte 2
+0x06b5  MOV                      ;; A <- (HL)      
+0x06b6  ANA                      ;; A <- A & A     
+0x06b7  JNZ 0x06d6               ;; if NZ, PC <- adr
+0x06ba  LXI 0x208a               ;; H <- byte 3, L <- byte 2
+0x06bd  MOV                      ;; A <- (HL)      
+0x06be  INX                      ;; HL <- HL + 1   
+0x06bf  INX                      ;; HL <- HL + 1   
+0x06c0  ADD                      ;; A <- A + (HL)  
+0x06c1  STA 0x208a               ;; (adr) <- A     
+0x06c4  CALL 0x073c              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06c7  LXI 0x208a               ;; H <- byte 3, L <- byte 2
+0x06ca  MOV                      ;; A <- (HL)      
+0x06cb  CPI 0x28                 ;; A - data       
+0x06cd  JC 0x06f9                ;; if CY, PC<-adr 
+0x06d0  CPI 0xe1                 ;; A - data       
+0x06d2  JNC 0x06f9               ;; if NCY, PC<-adr
+0x06d5  RET                      ;; PC.lo <- (sp); PC.hi<-(sp+1); SP <- SP+2
+0x06d6  MVI 0xfe                 ;; B <- byte 2    
+0x06d8  CALL 0x19dc              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06db  INX                      ;; HL <- HL + 1   
+0x06dc  DCR                      ;; (HL) <- (HL)-1 
+0x06dd  MOV                      ;; A <- (HL)      
+0x06de  CPI 0x1f                 ;; A - data       
+0x06e0  JZ 0x074b                ;; if Z, PC <- adr
+0x06e3  CPI 0x18                 ;; A - data       
+0x06e5  JZ 0x070c                ;; if Z, PC <- adr
+0x06e8  ANA                      ;; A <- A & A     
+0x06e9  RNZ                      ;; if NZ, RET     
+0x06ea  MVI 0xef                 ;; B <- byte 2    
+0x06ec  LXI 0x2098               ;; H <- byte 3, L <- byte 2
+0x06ef  MOV                      ;; A <- (HL)      
+0x06f0  ANA                      ;; A <- A & B     
+0x06f1  MOV                      ;; (HL) <- A      
+0x06f2  ANI 0x20                 ;; A <- A & data  
+0x06f4  OUT 0x05                 ;; special        
+0x06f6  NOP                      
+0x06f7  NOP                      
+0x06f8  NOP                      
+0x06f9  CALL 0x0742              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06fc  CALL 0x14cb              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x06ff  LXI 0x2083               ;; H <- byte 3, L <- byte 2
+0x0702  MVI 0x0a                 ;; B <- byte 2    
+0x0704  CALL 0x075f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0707  MVI 0xfe                 ;; B <- byte 2    
+0x0709  JMP 0x19dc               ;; PC <= adr      
+0x070c  MVI 0x01                 ;; A <- byte 2    
+0x070e  STA 0x20f1               ;; (adr) <- A     
+0x0711  LHLD 0x208d              ;; L <- (adr); H<-(adr+1)
+0x0714  MOV                      ;; B <- (HL)      
+0x0715  MVI 0x04                 ;; C <- byte 2    
+0x0717  LXI 0x1d50               ;; H <- byte 3, L <- byte 2
+0x071a  LXI 0x1d4c               ;; D <- byte 3, E <- byte 2
+0x071d  LDAX                     ;; A <- (DE)      
+0x071e  CMP                      ;; A - B          
+0x071f  JZ 0x0728                ;; if Z, PC <- adr
+0x0722  INX                      ;; HL <- HL + 1   
+0x0723  INX                      ;; DE <- DE + 1   
+0x0724  DCR                      ;; C <-C-1        
+0x0725  JNZ 0x071d               ;; if NZ, PC <- adr
+0x0728  MOV                      ;; A <- (HL)      
+0x0729  STA 0x2087               ;; (adr) <- A     
+0x072c  MVI 0x00                 ;; H <- byte 2    
+0x072e  MOV                      ;; L <- B         
+0x072f  DAD                      ;; HL = HL + HI   
+0x0730  DAD                      ;; HL = HL + HI   
+0x0731  DAD                      ;; HL = HL + HI   
+0x0732  DAD                      ;; HL = HL + HI   
+0x0733  SHLD 0x20f2              ;; (adr) <-L; (adr+1)<-H
+0x0736  CALL 0x0742              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0739  JMP 0x08f1               ;; PC <= adr      
+0x073c  CALL 0x0742              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x073f  JMP 0x1439               ;; PC <= adr      
+0x0742  LXI 0x2087               ;; H <- byte 3, L <- byte 2
+0x0745  CALL 0x1a3b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0748  JMP 0x1a47               ;; PC <= adr      
+0x074b  MVI 0x10                 ;; B <- byte 2    
+0x074d  LXI 0x2098               ;; H <- byte 3, L <- byte 2
+0x0750  MOV                      ;; A <- (HL)      
+0x0751  ORA                      ;; A <- A | B     
+0x0752  MOV                      ;; (HL) <- A      
+0x0753  CALL 0x1770              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0756  LXI 0x1d7c               ;; H <- byte 3, L <- byte 2
+0x0759  SHLD 0x2087              ;; (adr) <-L; (adr+1)<-H
+0x075c  JMP 0x073c               ;; PC <= adr      
+0x075f  LXI 0x1b83               ;; D <- byte 3, E <- byte 2
+0x0762  JMP 0x1a32               ;; PC <= adr      
+0x0765  MVI 0x01                 ;; A <- byte 2    
+0x0767  STA 0x2093               ;; (adr) <- A     
+0x076a  LXI 0x2400               ;; SP.hi <- byte 3, SP.lo <- byte 2
+0x076d  EI                       ;; special        
+0x076e  CALL 0x1979              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0771  CALL 0x09d6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0774  LXI 0x3013               ;; H <- byte 3, L <- byte 2
+0x0777  LXI 0x1ff3               ;; D <- byte 3, E <- byte 2
+0x077a  MVI 0x04                 ;; C <- byte 2    
+0x077c  CALL 0x08f3              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x077f  LDA 0x20eb               ;; A <- (adr)     
+0x0782  DCR                      ;; A <- A-1       
+0x0783  LXI 0x2810               ;; H <- byte 3, L <- byte 2
+0x0786  MVI 0x14                 ;; C <- byte 2    
+0x0788  JNZ 0x0857               ;; if NZ, PC <- adr
+0x078b  LXI 0x1acf               ;; D <- byte 3, E <- byte 2
+0x078e  CALL 0x08f3              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x0791  IN 0x01                  ;; special        
+0x0793  ANI 0x04                 ;; A <- A & data  
+0x0795  JZ 0x077f                ;; if Z, PC <- adr
+0x0798  MVI 0x99                 ;; B <- byte 2    
+0x079a  XRA                      ;; A <- A ^ A     
+0x079b  STA 0x20ce               ;; (adr) <- A     
+0x079e  LDA 0x20eb               ;; A <- (adr)     
+0x07a1  ADD                      ;; A <- A + B     
+0x07a2  DAA                      ;; special        
+0x07a3  STA 0x20eb               ;; (adr) <- A     
+0x07a6  CALL 0x1947              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07a9  LXI 0x0000               ;; H <- byte 3, L <- byte 2
+0x07ac  SHLD 0x20f8              ;; (adr) <-L; (adr+1)<-H
+0x07af  SHLD 0x20fc              ;; (adr) <-L; (adr+1)<-H
+0x07b2  CALL 0x1925              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07b5  CALL 0x192b              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07b8  CALL 0x19d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07bb  LXI 0x0101               ;; H <- byte 3, L <- byte 2
+0x07be  MOV                      ;; A <- H         
+0x07bf  STA 0x20ef               ;; (adr) <- A     
+0x07c2  SHLD 0x20e7              ;; (adr) <-L; (adr+1)<-H
+0x07c5  SHLD 0x20e5              ;; (adr) <-L; (adr+1)<-H
+0x07c8  CALL 0x1956              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07cb  CALL 0x01ef              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07ce  CALL 0x01f5              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07d1  CALL 0x08d1              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07d4  STA 0x21ff               ;; (adr) <- A     
+0x07d7  STA 0x22ff               ;; (adr) <- A     
+0x07da  CALL 0x00d7              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07dd  XRA                      ;; A <- A ^ A     
+0x07de  STA 0x21fe               ;; (adr) <- A     
+0x07e1  STA 0x22fe               ;; (adr) <- A     
+0x07e4  CALL 0x01c0              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07e7  CALL 0x1904              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07ea  LXI 0x3878               ;; H <- byte 3, L <- byte 2
+0x07ed  SHLD 0x21fc              ;; (adr) <-L; (adr+1)<-H
+0x07f0  SHLD 0x22fc              ;; (adr) <-L; (adr+1)<-H
+0x07f3  CALL 0x01e4              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07f6  CALL 0x1a7f              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07f9  CALL 0x088d              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07fc  CALL 0x09d6              ;; (SP-1)<-PC.hi;(SP-2)<-PC.lo;SP<-SP-2;PC=adr
+0x07ff  NOP                      
